@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizes_css</title>
+    <link rel="stylesheet" href="../css/sizes_css.css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Тренажер по размерам CSS</h1>
+        </center>
+    </header>
+    <main>
+        <section>
+            <h2>Задание 1</h2>
+            <p>Установите для html-элемента размер шрифта 16px, а для заголовка h1 — 40px. Для величины шрифта заголовка используйте относительные величины.</p>
+            <div class="title-block">
+                <h3>Базовые свойства. Размеры</h3>
+                <h4>Занимательный подзаголовок</h4>
+            </div>
+            <p class="example"> <strong>&bull;В CSS</strong>
+                <code>
+                    html{font-size: 24px;} <br>
+                    h3{font-size: 2.5rem;}
+                </code>
+            </p>
+        </section>
+        <section>
+            <h2>Задание 2</h2>
+            <p>Напишите стили для .title-block, h1 и h2 так, чтобы размер шрифта h1 остался 40px, а размер шрифта подзаголовка был в два раза меньше. Для размеров heading-элементов используйте величины em.</p>
+            <div class="title-block">
+                <h5>Базовые свойства. Размеры</h5>
+                <h6>Занимательный подзаголовок</h6>
+            </div>
+            <p class="example"> <strong>&bull;В CSS</strong>
+                <code>
+                    .title-block{font-size: 2.5rem;} <br>
+                    .title-block&gt;h4{font-size: 0.5em;}
+                </code>
+            </p>
+        </section>
+        <section>
+            <h2>Задание 3</h2>
+            <p>Установите стиль для ul так, чтобы каждая следующая строка была в два раза больше предыдущей.</p>
+            <ul>
+                <li>Строка 1</li>
+                <ul>
+                  <li>Строка 2</li>
+                  <ul>
+                    <li>Строка 3</li>
+                  </ul>
+                </ul>
+            </ul>
+              <p class="example"> <strong>&bull;В CSS</strong>
+                <code>
+                    ul{font-size: 20px;} <br>
+                    li+ul{font-size: 200%;}
+                </code>
+            </p>
+        </section>
+        <section>
+            <h2>Задание 4</h2>
+            <p>Установите синему блоку ширину, равную ширине страницы, а красный растяните на всю высоту.</p>
+            <div class="red">
+                <div class="blue"></div>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 5</h2>
+            <p>В прошлом задании вы увидели, что синий блок вышел далеко за границы родительского красного блока. Замените свойство width на min- и max-width так, чтобы красный блок растянулся вслед за синим, но не сжимался меньше 40px.</p>
+            <div class="red1">
+                <div class="blue1"></div>
+              </div>
+        </section>
+        <section>
+            <h2>Задание 6</h2>
+            <p>Задайте синему блоку высоту, равную половине высоты родительского элемента.</p>
+            <div class="red2">
+                <div class="blue2"></div>
+              </div>
+        </section>
+    </main>
+    <footer>
+        <a href="css.html">	&#9668;Назад</a>
+    </footer>
+</body>
+</html>

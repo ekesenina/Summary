@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "Engine";
+    src: url(../font/LEngineer-Regular.otf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+
+body{background-color: #c9ffb9;}
+
+header{background-color: #77966E;}
+
+h1{color: #FFC0A1;
+    font-size: 96px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+h2{background-color: #D4AE9B;
+    color: #543424;
+    font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+p{color: #543424;
+    font-size: 24px;
+    font-family:"NotoSans";}
+
+div{background-color: #D4AE9B;
+    font-size: 24px;
+    width: fit-content;
+    margin-left: 100px;
+    font-family: "NotoSans";}
+
+.example{font-size: 20px;
+    background-color: #e4d8c7;
+    border-color: #543424;
+    width:fit-content;
+    margin-left: 100px;}
+
+.food{color: #b0651e;}
+
+.household{color: #097224;}
+
+.vet{color: #57139a;}
+
+.not-bought{background-color: #e16b68;}
+
+a[href="css.html"]{background-color: #D4AE9B;
+    color: #543424;
+    font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конспект</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Основы html</h1>
+    </header>
+    <nav>
+        <div>
+            <a href="#paragraf1">Специальные символы и форматирование</a> <br>
+            <a href="#paragraf2">Изображения на сайте</a> <br>
+            <a href="#paragraf3">Ссылки</a> <br>
+            <a href="#paragraf4">Iframe</a> <br>
+        </div>
+        <div>
+            <a href="pages/css.html" target="_blank">Конспект по CSS</a>
+            <a href="pages/Git.GitHub.html" target="_blank">Git.GitHub</a>
+        </div>
+    </nav>
+    <main>
+        <h2 id="paragraf1"> Специальные символы и форматирование</h2>
+        <p>&#9989;7999	&#8381; <br>
+            &emsp;<del>14999	&#8381;</del></p>
+        <p>&#9989;H<sub>2</sub>O <br>
+        a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup> </p>
+        <p>&#9989;Lorem ipsum dolor sit amet consectetur adipisicing elit. <q>Voluptatum magni incidunt, rem saepe expedita minima dolorum illo eum assumenda odio et facere doloribus nobis dolorem officiis dolor ex sed nesciunt</q> .</p>
+        <p><blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br> <br>
+            Doloremque commodi iusto, molestias ullam consequatur sed accusantium tempore sit voluptate sint eveniet in reiciendis similique dignissimos dicta repellat obcaecati? <br>
+            Voluptas, voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vero, vel explicabo, eveniet deleniti optio eum sed odio nobis in laudantium? <br>
+            Enim iure odio corporis id consectetur magni modi quidem.</blockquote></p>
+        <p>&#9989;&lt; Чтобы поставить треугольные скобки, нужно вводить код спецсимвола, иначе не получится &gt;</p>
+        <p>&#9989; <b>Список покупок</b> </p>
+        <ol>
+            <li>Первый пункт</li>
+            <li>Второй пункт</li>
+            <li>Третий пункт</li>
+            <ul>
+                <li>Молоко</li>
+                <li>Хлеб</li>
+                <li>Яйца</li>
+            </ul>
+            <li>Четвертый пункт</li>
+        </ol>
+        <pre>&#9989;Этот тег (pre) используется
+                чтобы поставить
+            отступы какие хочешь
+                        (отобразить на странице
+                код)
+        </pre>
+        <hr>
+        <h2 id="paragraf2">Изображения на сайте</h2>
+        <p>*src-источник*</p>
+        <p>&#9989;Фото .jpg</p>
+        <img src="img/Шаня.jpg" alt="Фото" width="200px">
+        <p>&#9989;Фото .png</p>
+        <img src="img/стикер.png" alt="Изображение" height="200px">
+        <p>&#9989;Ссылка на Изображение из википедии</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/European_Dobermann.jpg/411px-European_Dobermann.jpg" 
+            alt="Доберман" width="200px">
+        <p>&#9989;Гифка из инета</p>
+        <img src="https://media2.giphy.com/media/uk4Va5MkRp2bfkOk6f/giphy.gif?cid=ecf05e47647f3f216accb6b419ef9dbc8c72105c5fee355d&rid=giphy.gif&ct=g" 
+            alt="Доберман" width="200px">
+        <p>&#9989;Вставка видео тегом 	&lt;video	&gt;</p>
+            <video controls="controls" width="400" poster="img/Постер.jpg"> 
+                <source src="img/Видео1.mp4"> 
+                Видео не поддерживается вашим браузером
+            </video>
+        <hr>
+        <h2 id="paragraf3">Ссылки</h2>
+            <p>&#9989;Ссылка на доугой сайт</p>
+                <a href="http://htmlbook.ru/" target="_blank"> <b>Сайт htmlbook</b> </a>
+            <p>&#9989;Навигация по сайту</p>
+                <a href="#paragraf1">Специальные символы и форматирование</a> <br>
+                <a href="#paragraf2">Изображения на сайте</a> <br>
+                <a href="#paragraf3">Ссылки</a> <br>
+                <a href="#paragraf4">Iframe</a>
+        <p>&#9989;Подсказка при наведении</p>
+            <a href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%B1%D0%B5%D1%80%D0%BC%D0%B0%D0%BD" 
+                title="Перейти на сайт википедии" target="_blank"> Узнать больше о доберманах</a>
+        <p>&#9989;Ссылка в изображении</p>
+            <a href="https://ru.wikipedia.org/wiki/Самоедская_собака" 
+                title="Узнать больше" 
+                target="_blank"> 
+                <img src="img/Шаня1.jpg" alt="Самоедская_лайка" width="200px">
+        </a>
+        <hr>
+        <h2 id="paragraf4"><b>Iframe</b></h2>
+            <p>&#9989;Сайт в сайте</p>
+                <iframe src="https://ru.wikipedia.org/wiki/Самоедская_собака" width="1200px" height="500px"></iframe>
+            <p>&#9989;PDF во фрейме</p>
+                <iframe src="img/ПДФ.pdf" width="800px" height="400px"></iframe>
+            <p>&#9989;Несколько сайтов в одном iframe по ссылкам</p>
+                <ul>
+                    <li><a href="https://ru.wikipedia.org/wiki/Самоедская_собака" target="myframe">Самоедская лайка</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/Доберман" target="myframe">Доберман</a></li>
+                    <li><a href="https://ru.wikipedia.org/wiki/Американский_стаффордширский_терьер" target="myframe">Американский стаффордширский терьер</a></li>
+                </ul>
+                <iframe src="https://ru.wikipedia.org/wiki/Самоедская_собака" name="myframe" width="900px" height="500px"></iframe>
+            <p>&#9989;Вставка яндекс карты (виджет)</p>
+            <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/66/omsk/?utm_medium=mapframe&utm_source=maps" 
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Омск</a>
+                <a href="https://yandex.ru/maps/66/omsk/house/ulitsa_mishina_2/Y0oYcgJpS0ABQFtufXVwcHxgZQ==/?indoorLevel=1&ll=73.459256%2C54.911031&utm_medium=mapframe&utm_source=maps&z=16.66" 
+                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Мишина, 2 — Яндекс Карты</a>
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/-/CCUN7IFPDA" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">
+                </iframe>
+            </div>
+            <hr>
+        <h2 id="paragraf5"><b>Семантическая верстка</b></h2>
+            <header>
+                <h1>&#9989;HEADER</h1>
+                <p>-это верхняя часть страницы</p>
+            </header>
+            <nav class="navbar">
+                <h3>&#9989;NAVBAR</h3>
+                <p>Здесь осуществляется навигация по сайту <br>
+                    (как внутри страницы, так и на другие страницы этого сайта)</p>
+                <a href="#paragraf1">Специальные символы и форматирование</a> <br>
+                <a href="#paragraf2">Изображения на сайте</a> <br>
+                <a href="#paragraf3">Ссылки</a> <br>
+                <a href="#paragraf4">Iframe</a> <br>
+                <a href="#paragraf5">Семантическая верстка</a>
+            </nav>
+            <main>
+                <article>
+                    <section>
+                        <h3>&#9989;Секция 1</h3>
+                        <p>Секции делят MAIN на несколько смысловых частей <br> 
+                            Все секции можно запихнуть в один ARTICLE</p>
+                        <img src="img/section1.jpg" alt="image" width="1440px">
+                    </section>
+                    <section>
+                        <h3>&#9989;Секция 2</h3>
+                        <h4>Вторая секция может содержать что-либо, исходя из контента сайта</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
+                            Porro, sequi vitae! Sed magnam incidunt dolor iure pariatur autem voluptatum dicta corporis aliquam quod et <br> 
+                            voluptates saepe, cumque natus blanditiis assumenda.</p>
+                        <img src="img/section2.png" alt="png" width="400px">
+                    </section>
+                    <section>
+                        <h3>&#9989;Секция 3</h3>
+                        <p>Существуют также элементы &lt;figure&gt; и &lt;figcaption&gt;<br>
+                            Они позволяют вставлять изображение с подписью к нему (пояснением)</p>
+                        <figure>
+                            <img src="img/Филя.jpg" alt="image" width="400px">
+                            <figcaption>На фотографии изображен самый лучший кот <br> по имени Филя</figcaption>
+                        </figure>
+                    </section>
+                </article>
+            </main>
+    </main>
+        <footer>
+            <h3>&#9989;FOOTER</h3>
+            <p> -это подвал сайта, на котором отображается контактная информация, а также навбар </p>
+            <p>&#9742;+7(904) 075-86-45</p>
+            <p>&#9993;ekesenina2306@gmail.com</p>
+            <a href="http://vk.com/ek_esenina" target="_blank">	&#128270;VKontakte</a> <br>
+            <a href="https://youtu.be/lbKfyfRFsao" target="_blank">	&#128270;YouTube</a> <br>
+            <a href="https://pin.it/3SirXcq" target="_blank">	&#128270;Pinterest</a> <br><br>
+        </footer>
+</body>
+</html>

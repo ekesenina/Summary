@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <link rel="stylesheet" href="../css/Display.css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Свойство Display</h1>
+        </center>
+    </header>
+    <main>
+        <section>
+            <h2>Задание 1</h2>
+            <p>Измените стиль элемента .item так, чтоб цифры выстроились в колонку.</p>
+                <div class="wrapper1">
+                    <span class="item1">1</span>
+                    <span class="item1">2</span>
+                    <span class="item1">3</span>
+                    <span class="item1">4</span>
+                    <span class="item1">5</span>
+                    <span class="item1">6</span>
+                    <span class="item1">7</span>
+                    <span class="item1">8</span>
+                    <span class="item1">9</span>
+                    <span class="item1">10</span>
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;div class="wrapper"&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            .wrapper {background-color: lightgray;<br>
+                                &emsp;&emsp;padding: 15px 5px;}<br>
+                            .item {<strong>display: block;</strong><br>
+                                &emsp;&emsp;margin: 5px;<br>
+                                &emsp;&emsp;padding: 10px;<br>
+                                &emsp;&emsp;background-color: rgb(132, 117, 152);<br>
+                                &emsp;&emsp;color: white;}
+                            </code>
+                        </p>
+                </div>
+        </section>
+        <section>
+            <h2>Задание 2</h2>
+            <p>Теперь снова выстройте цифры в ряд, но при этом каждый элемент .item должен иметь ширину 50px. Изменяйте стили только у класса .item.</p>
+                <div class="wrapper2">
+                    <span class="item2">1</span>
+                    <span class="item2">2</span>
+                    <span class="item2">3</span>
+                    <span class="item2">4</span>
+                    <span class="item2">5</span>
+                    <span class="item2">6</span>
+                    <span class="item2">7</span>
+                    <span class="item2">8</span>
+                    <span class="item2">9</span>
+                    <span class="item2">10</span>
+                </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {background-color: lightgray;<br>
+                            &emsp;&emsp;padding: 15px 5px;}<br>
+                        .item {<strong>display: inline-block;</strong><br>
+                            &emsp;&emsp;<strong>width: 50px;</strong><br>
+                            &emsp;&emsp;margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(132, 117, 152);<br>
+                            &emsp;&emsp;color: rgb(198, 198, 198);}
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 3</h2>
+            <p>Скройте все блоки с чётными цифрами.</p>
+                <div class="wrapper">
+                    <span class="item">1</span>
+                    <span class="item">2</span>
+                    <span class="item">3</span>
+                    <span class="item">4</span>
+                    <span class="item">5</span>
+                    <span class="item">6</span>
+                    <span class="item">7</span>
+                    <span class="item">8</span>
+                    <span class="item">9</span>
+                    <span class="item">10</span>
+                </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {background-color: lightgray;<br>
+                            &emsp;&emsp;padding: 15px 5px;}<br>
+                        .item {display: inline-block;<br>
+                            &emsp;&emsp;width: 50px;<br>
+                            &emsp;&emsp;margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(132, 117, 152);<br>
+                            &emsp;&emsp;color: rgb(198, 198, 198);}<br>
+                        <strong>.item:nth-child(even){display: none;}</strong>
+                    </code>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="css.html">	&#9668;Назад</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Engine";
+    src: url(../font/LEngineer-Regular.otf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+
+body{background-color: #c9ffb9;}
+
+header{background-color: #77966E;}
+
+h1{color: #FFC0A1;
+    font-size: 96px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+h2{font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+p{color: #543424;
+    font-size: 24px;
+    font-family:"NotoSans";}
+
+div{color: #543424;
+    background-color: #D4AE9B;
+    font-size: 24px;
+    width: fit-content;
+    margin-left: 100px;
+    font-family: "NotoSans";}
+
+a{color: #543424;
+    font-size: 18px;
+    font-family:"NotoSans";
+    margin: 0px 15px;}
+    a:hover{background-color: #c9ffb9;}
+
+a[href="#food"]{background-color: #d1eacd;}
+    a[href="#food"]:hover{background-color: #77966E;}
+
+a[href="#vet"]{background-color: #e5cdea;}
+    a[href="#vet"]:hover{background-color: #bba8bf;}
+
+a[href="css.html"]{background-color: #D4AE9B;
+    color: #543424;
+    font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;}

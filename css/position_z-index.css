@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "TMVinograd-Regular";
+    src: url(../font/TMVinograd-Regular.otf);
+}
+
+@font-face {
+    font-family: "Engine";
+    src: url(../font/LEngineer-Regular.otf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+
+body{background-color: #c9ffb9;}
+
+header{background-color: #77966E;}
+
+h1{color: #FFC0A1;
+    font-size: 96px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+h2{background-color: #D4AE9B;
+    color: #543424;
+    font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+p{color: #543424;
+    font-size: 24px;
+    font-family:"NotoSans";}
+
+.example{
+    font-size: 20px;
+    background-color: #e4d8c7;
+    border-color: #543424;
+    width:fit-content;
+    margin-left: 300px;}
+
+.example_div{display: flex;}
+
+.wrapper {background-color: lightgray;
+    padding: 15px 5px;}
+.item {margin: 5px;
+    padding: 10px;
+    background-color: rgb(139, 127, 177);
+    color: white;
+    display: block;}
+.item:nth-child(odd){position: relative;
+    left: 50px;}
+
+.wrapper2 {background-color: lightgray;
+    padding: 15px 5px;}
+.item2 {margin: 5px;
+    padding: 10px;
+    background-color: rgb(101, 170, 129);
+    color: white;
+    display: block;}
+.item2:nth-child(10){position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;}
+
+.wrapper3 {background-color: lightgray;
+    padding: 15px 5px;
+    position: relative;}
+.item3 {margin: 5px;
+    padding: 10px;
+    background-color: rgb(83, 110, 161);
+    color: white;
+    display: block;}
+.item3:first-child {background: rgb(188, 120, 100);
+    position: sticky;
+    top: 0px;
+    z-index: 1;}
+
+#pink{position: relative;}
+.pink {width: 100%;
+    height: 200px;
+    background: pink;}
+h3{color: #543424;
+    font-family: "Engine";
+    font-weight: lighter;
+    font-size: 100px;
+    padding: 50px;
+    margin: 0;
+    position: absolute;
+    top: 0px;}
+
+.blue {width: 200px;
+    height: 200px;
+    background: rgb(109, 109, 170);
+    position: absolute;}
+.red {width: 100px;
+    height: 100px;
+    background: rgb(192, 111, 111);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 50px;}
+h4 {color: #543424;
+    font-family: "Engine";
+    font-weight: lighter;
+    font-size: 100px;
+    padding: 50px;
+    margin: 0;
+    position: absolute;
+    z-index: 1;}
+
+    a[href="css.html"]{background-color: #D4AE9B;
+        color: #543424;
+        font-size: 48px;
+        font-family: "Engine";
+        font-weight: lighter;
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        z-index: 3;}

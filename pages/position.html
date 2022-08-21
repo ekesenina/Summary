@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Позиционирование</title>
+    <link rel="stylesheet" href="../css/position.css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Position</h1>
+        </center>
+    </header>
+    <main>
+        <section>
+            <h2>Position: relative;</h2>
+            <div class="position">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="blue"></div>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>div {display: inline-block;<br>
+                        width: 100px;<br>
+                        height: 100px;}<br>
+                        .red {background-color: red;<br>
+                            <strong>position: relative;</strong><br>
+                            top: 150px;<br>
+                            left: 20px;}<br>
+                        .yellow {background-color: yellow;}<br>
+                        .blue {background-color: blue;}</code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Position: fixed;</h2>
+            <div class="position">
+                <div class="red1"><img src="../img/Стрелка.png" style="width:100px" alt="img"></div>
+                <div class="yellow1"></div>
+                <div class="blue1"></div>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>div {display: inline-block;<br>
+                        width: 100px;<br>
+                        height: 100px;}<br>
+                        .red1 {background-color: red;<br>
+                            <strong>position: fixed;</strong> <br>
+                            bottom: 100px;<br>
+                            right: 100px;}<br>
+                        .yellow1 {background-color: yellow;}<br>
+                        .blue1 {background-color: blue;}
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Position: absolute;</h2>
+            <div class="position2">
+                <div class="red2"></div>
+                <div class="yellow2"></div>
+                <div class="blue2"></div>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>.position2{display: flex;<br>
+                        border: dashed #543424;<br>
+                        width: fit-content;<br>
+                        height: fit-content;<br>
+                        <strong> position: relative;}</strong><br>
+                        div {display: inline-block;<br>
+                        width: 100px;<br>
+                        height: 100px;}<br>
+                        .red {background-color: red;<br>
+                            <strong>position: absolute;</strong><br>
+                            bottom: 50px;<br>
+                            right: 400px;}<br>
+                        .yellow {background-color: yellow;}<br>
+                        .blue {background-color: blue;}</code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Position: sticky;</h2>
+            <p>Для примера используется самый первый заголовок "Position"</p>
+        </section>
+    </main>
+    <footer>
+        <a href="css.html">	&#9668;Назад</a>
+    </footer>
+</body>
+</html>

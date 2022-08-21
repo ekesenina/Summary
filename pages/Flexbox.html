@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="../css/Flexbox.css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Flexbox</h1>
+        </center>
+    </header>
+    <main>
+        <section>
+            <h2>Задание 1</h2>
+            <p>Измените стиль родительского блока так, чтоб цифры выстроились в колонку в обратном порядке.</p>
+                <div class="wrapper1">
+                    <span class="item1">1</span>
+                    <span class="item1">2</span>
+                    <span class="item1">3</span>
+                    <span class="item1">4</span>
+                    <span class="item1">5</span>
+                    <span class="item1">6</span>
+                    <span class="item1">7</span>
+                    <span class="item1">8</span>
+                    <span class="item1">9</span>
+                    <span class="item1">10</span>
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;div class="wrapper"&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                                &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            .wrapper {display: flex;<br>
+                                &emsp;&emsp;background-color: lightgray;<br>
+                                &emsp;&emsp;<strong>flex-direction: column-reverse;</strong><br>
+                                &emsp;&emsp;align-items: flex-start;}<br>
+                            .item {margin: 5px;<br>
+                                &emsp;&emsp;padding: 10px;<br>
+                                &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                                &emsp;&emsp;color: white;}
+                            </code>
+                        </p>
+                </div>
+        </section>
+        <section>
+            <h2>Задание 2</h2>
+            <p>Измените стиль родительского блока, разрешив перенос блоков и разместив их в несколько строк. </p>
+            <div class="wrapper2">
+                <span class="item2">1</span>
+                <span class="item2">2</span>
+                <span class="item2">3</span>
+                <span class="item2">4</span>
+                <span class="item2">5</span>
+                <span class="item2">6</span>
+                <span class="item2">7</span>
+                <span class="item2">8</span>
+                <span class="item2">9</span>
+                <span class="item2">10</span>
+              </div>
+              <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;<br>
+                            &emsp;&emsp;<strong>flex-wrap: wrap;</strong><br>
+                            &emsp;&emsp;align-items: flex-start;}<br>
+                        .item {margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                            &emsp;&emsp;color: white;}<br>
+                            &emsp;&emsp;min-width: 25%;
+                        </code>
+                    </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 3</h2>
+            <p>Измените стиль родительского блока так, чтобы все блоки поместились в контейнер и выстроились в обратном порядке от 10 до 1. Используйте свойство flex-flow.</p>
+            <div class="wrapper3">
+                <span class="item3">1</span>
+                <span class="item3">2</span>
+                <span class="item3">3</span>
+                <span class="item3">4</span>
+                <span class="item3">5</span>
+                <span class="item3">6</span>
+                <span class="item3">7</span>
+                <span class="item3">8</span>
+                <span class="item3">9</span>
+                <span class="item3">10</span>
+            </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;<br>
+                            &emsp;&emsp;<strong>flex-flow: row-reverse wrap-reverse;</strong><br>
+                            &emsp;&emsp;align-items: flex-start;}<br>
+                        .item {margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                            &emsp;&emsp;color: white;}<br>
+                            &emsp;&emsp;min-width: 25%;
+                        </code>
+                    </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 4</h2>
+            <p>Распределите дочерние элементы так, чтоб они заполняли всё пространство по вертикали и имели равные межблочные расстояния.</p>
+            <div class="wrapper4">
+                <span class="item4">1</span>
+                <span class="item4">2</span>
+                <span class="item4">3</span>
+                <span class="item4">4</span>
+                <span class="item4">5</span>
+                <span class="item4">6</span>
+                <span class="item4">7</span>
+                <span class="item4">8</span>
+                <span class="item4">9</span>
+                <span class="item4">10</span>
+            </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {height: 100vh;<br>
+                            &emsp;&emsp;min-height: 700px;<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;<br>
+                            &emsp;&emsp;flex-flow: column;<br>
+                            &emsp;&emsp;<strong>justify-content: space-between;</strong><br>
+                            &emsp;&emsp;<strong>align-items: stretch;}</strong><br>
+                        .item {margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                            &emsp;&emsp;color: white;<br>
+                            &emsp;&emsp;min-width: 25%;}<br>
+                        </code>
+                    </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 5</h2>
+            <p>Теперь сгруппируйте дочерние элементы в центре родительского блока по вертикали и по горизонтали. Ширина каждого блока не должна превышать 30%.</p>
+            <div class="wrapper5">
+                <span class="item5">1</span>
+                <span class="item5">2</span>
+                <span class="item5">3</span>
+                <span class="item5">4</span>
+                <span class="item5">5</span>
+                <span class="item5">6</span>
+                <span class="item5">7</span>
+                <span class="item5">8</span>
+                <span class="item5">9</span>
+                <span class="item5">10</span>
+            </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {height: 100vh;<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;<br>
+                            &emsp;&emsp;flex-flow: column;<br>
+                            &emsp;&emsp;justify-content: space-between;<br>
+                            &emsp;&emsp;<strong>align-items: center;}</strong><br>
+                        .item {margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                            &emsp;&emsp;color: white;<br>
+                            &emsp;&emsp;min-width: 25%;}<br>
+                            &emsp;&emsp;<strong>max-width: 30%;}</strong>
+                        </code>
+                    </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 6</h2>
+            <p>Сгруппируйте все дочерние элементы в центре родительского блока по горизонтали и по вертикали.</p>
+            <div class="wrapper6">
+                <span class="item6">1</span>
+                <span class="item6">2</span>
+                <span class="item6">3</span>
+                <span class="item6">4</span>
+                <span class="item6">5</span>
+                <span class="item6">6</span>
+                <span class="item6">7</span>
+                <span class="item6">8</span>
+                <span class="item6">9</span>
+                <span class="item6">10</span>
+            </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {height: 100vh;<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;<br>
+                            &emsp;&emsp;flex-wrap: wrap;<br>
+                            &emsp;&emsp;justify-content: center;<br>
+                            &emsp;&emsp;<strong>align-content: center;}</strong><br>
+                        .item {margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                            &emsp;&emsp;color: white;<br>
+                            &emsp;&emsp;min-width: 25%;}<br>
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 7</h2>
+            <p>Установите порядок дочерних элементов так, чтоб сначала шли нечётные, а потом чётные числа. Используйте свойство order и псевдокласс :nth-child.</p>
+            <div class="wrapper7">
+                <span class="item7">1</span>
+                <span class="item7">2</span>
+                <span class="item7">3</span>
+                <span class="item7">4</span>
+                <span class="item7">5</span>
+                <span class="item7">6</span>
+                <span class="item7">7</span>
+                <span class="item7">8</span>
+                <span class="item7">9</span>
+                <span class="item7">10</span>
+              </div>
+              <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {height: 50vh;<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;<br>
+                            &emsp;&emsp;flex-wrap: wrap;<br>
+                            &emsp;&emsp;justify-content: center;<br>
+                            &emsp;&emsp;<strong>align-items: center;}</strong><br>
+                        .item:nth-child(odd){order: -1;}<br>
+                        .item {margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                            &emsp;&emsp;color: white;<br>
+                            &emsp;&emsp;min-width: 25%;}<br>
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 8</h2>
+            <p>Теперь растяните последний элемент на всю доступную ширину.</p>
+            <div class="wrapper8">
+                <span class="item8">1</span>
+                <span class="item8">2</span>
+                <span class="item8">3</span>
+                <span class="item8">4</span>
+                <span class="item8">5</span>
+                <span class="item8">6</span>
+                <span class="item8">7</span>
+                <span class="item8">8</span>
+                <span class="item8">9</span>
+                <span class="item8">10</span>
+            </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {height: 50vh;<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;<br>
+                            &emsp;&emsp;align-items: flex-start<br>
+                            &emsp;&emsp;flex-wrap: wrap;<br>
+                            &emsp;&emsp;justify-content: center;<br>
+                            &emsp;&emsp;align-content: center;}<br>
+                        .item {margin: 5px;<br>
+                            &emsp;&emsp;padding: 10px;<br>
+                            &emsp;&emsp;background-color: rgb(91, 80, 116);<br>
+                            &emsp;&emsp;color: white;<br>
+                            &emsp;&emsp;min-width: 25%;}<br>
+                        .item:nth-child(even){order: 1;}<br>
+                        <strong>.item:last-child{flex-grow: 1;}</strong>
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 9</h2>
+            <p>Установите синему блоку стили так, чтоб его ширина не могла быть меньше заданной.</p>
+            <div class="wrapper9">
+                <span class="red9"></span>
+                <span class="blue9"></span>
+            </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="red"&gt;&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="blue"&gt;&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {height: 20vh;<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;}<br>
+                        .red {<strong>width: 70%;</strong><br>
+                            &emsp;&emsp;height: 100%;<br>
+                            &emsp;&emsp;background: rgb(203, 147, 147);}<br>
+                        .blue {<strong>width: 70%;</strong><br>
+                            &emsp;&emsp;height: 100%;<br>
+                            &emsp;&emsp;background: rgb(139, 205, 164);<br>
+                            &emsp;&emsp;<strong>flex-shrink: 0;}</strong> <br>
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 10</h2>
+            <p>Задайте синему блоку высоту в 20px и расположите его относительно родительского контейнера в центре по вертикали.</p>
+            <div class="wrapper">
+                <span class="red"></span>
+                <span class="blue"></span>
+            </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;span class="red"&gt;&lt;/span&gt;<br>
+                            &emsp;&emsp;&lt;span class="blue"&gt;&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {height: 20vh;<br>
+                            &emsp;&emsp;display: flex;<br>
+                            &emsp;&emsp;background-color: lightgray;}<br>
+                        .red {<strong>width: 70%;</strong><br>
+                            &emsp;&emsp;background: rgb(203, 147, 147);}<br>
+                        .blue {<strong>width: 70%;</strong><br>
+                            &emsp;&emsp;background: rgb(139, 205, 164);<br>
+                            &emsp;&emsp;<strong>flex-shrink: 0;</strong> <br>
+                            &emsp;&emsp;<strong>height: 20px;</strong> <br>
+                            &emsp;&emsp;<strong>align-self: center;}</strong> <br>
+                    </code>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="css.html">	&#9668;Назад</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@font-face {
+    font-family: "Engine";
+    src: url(../font/LEngineer-Regular.otf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+} 
+
+@media screen and (max-width: 600px) {
+    html,body,header,main,footer{
+      background: #bcd6f5;
+    }
+    .post{background-color: #9fafc3;}
+    center>h1{background-color: #687788;
+        color: #ffad84;
+        padding: 20px;}
+    body>header::after{content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(0deg, transparent, #687788 80%);}
+  } 
+
+@media(max-width: 600px){
+    div>.text{color: #543424;
+        font-size: 18px;
+        font-family:"NotoSans";
+        padding: 10px;
+        width: 266px;
+        height: 80px;
+        margin: 0px;
+        position: relative;
+        overflow: hidden;}
+    div>.text::after{content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(180deg, transparent, #9fafc3 50%);}}
+
+body{background-color: #c9ffb9;}
+
+header{background-color: #77966E;
+    position: relative;
+    padding-bottom: 2px;}
+
+main{padding-top: 70px;}
+
+h1{color: #FFC0A1;
+    font-size: 96px;
+    font-family: "Engine";
+    font-weight: lighter;
+    margin: 0px;
+    padding: 20px;}
+
+header::after{content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(0deg, transparent, #77966E 80%);}
+
+h2{background-color: #D4AE9B;
+    color: #543424;
+    font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+.text{color: #543424;
+    font-size: 18px;
+    font-family:"NotoSans";
+    padding: 10px;
+    width: 266px;
+    height: 80px;
+    margin: 0px;
+    position: relative;
+    overflow: hidden;}
+.text::after{content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(180deg, transparent, #c9ffb9 50%);}
+
+.small_text{color: #5d493f;
+    font-size: 16px;
+    font-family:"NotoSans";
+    font-weight: lighter;
+    padding: 10px;
+    margin: 0px;
+    height: fit-content;}
+
+.example{
+    font-size: 20px;
+    background-color: #e4d8c7;
+    border-color: #543424;
+    width:fit-content;
+    margin-left: 300px;}
+
+.example_div{display: flex;}
+
+.grid-wrapper {display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+    grid-template-rows: auto;
+    grid-gap: 1.5vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0px 90px;}
+
+.grid-item{
+    max-height: 400px;
+    max-width: 266px;
+    min-width: 266px;}
+
+img{border-radius: 30px 30px 0px 0px;}
+
+.post{display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px grey;
+    width: min-content;
+    max-width: 266px;}
+.post:hover{box-shadow: 10px 10px 20px rgb(53, 14, 14);}
+
+.author{display: flex;
+    max-width: fit-content;
+    padding: 5px;
+    margin-top: 10px;}
+.author_img{height: 50px;
+    width: 50px;
+    border-radius: 25px;}
+
+a{text-decoration: none;}
+
+a[href="css.html"]{background-color: #D4AE9B;
+    color: #543424;
+    font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;
+    border-radius: 30px;
+    padding: 0px 20px 0px 10px;}

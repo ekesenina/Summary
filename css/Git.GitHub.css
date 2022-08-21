@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "TMVinograd-Regular";
+    src: url(../font/TMVinograd-Regular.otf);
+}
+
+@font-face {
+    font-family: "Engine";
+    src: url(../font/LEngineer-Regular.otf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: "ComicSans";
+    src: url(../font/comic.ttf);
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url(../font/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+body{background-color: #ECF2F2;}
+
+header{
+    background-color: #4b4b50;
+    position: relative;
+    padding-bottom: 2px;}
+h1{
+    font-family: "Engine";
+    font-size: 96px;
+    margin: 0px;
+    color: #F2C166;}
+
+nav{
+    background-color: #4b4b50;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 6px 11px 10px 0px grey;
+}
+
+.topButton {position: fixed;
+    right: 45px;
+    bottom: 45px;
+    background-color: #5a5a5a;
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+    border-style: outset;
+    border-color: #F2C166;
+    font-family: "Engine";
+    font-weight: bold;
+    font-size: 36px;}
+    .topButton a{justify-content: center;
+        align-items: flex-end;}
+
+.button{font-size: 24px;
+    font-family: "Engine";
+    font-weight: bold;
+    color: #F2C166;}
+    .button:hover{
+        background-color: #5a5a5a;}
+
+.dropbtn{background-color: #4b4b50;
+    color: #F2C166;
+    padding: 5px;
+    font-size: 24px;
+    border: none;
+    font-family: "Engine";
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 20px 20px 0px 0px;}
+
+.dropdown{position: relative;
+    display: inline-block;
+    margin-right: 30px;}
+
+.dropdown_content{display: none;
+    position: absolute;
+    background-color: #5a5a5a;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px #4b4b50;
+    z-index: 1;
+    border-radius: 0px 20px 20px 20px;}
+
+.dropdown_content a{color: #F2C166;
+    padding: 10px;
+    display: block;
+    font-family: "ComicSans";
+    font-size: 16px;}
+
+.dropdown_content a:hover{background-color: #4e4d4d;
+    border-radius: 20px;}
+
+.dropdown:hover .dropdown_content{display: block;}
+
+.dropdown:hover .dropbtn{background-color: #5a5a5a;}
+
+main{
+    background-color: #ECF2F2;}
+
+h2{
+    font-family: "Engine";
+    font-size: 48px;
+    background-color: #F2C166;
+    color: #424248;
+    box-shadow: 5px 5px 10px gray;
+    padding-left: 20px;
+    margin: 40px 0px 30px 0px;}
+
+article{
+    margin-left: 30px;}
+
+h3{
+    font-family: "Engine";
+    font-size: 36px;
+    font-weight: lighter;
+    background-color: #4b4b50;
+    color: #F2C166;
+    box-shadow: 5px 5px 10px gray;
+    padding-left: 20px;
+}
+
+h4{
+    font-family: "Engine";
+    font-size: 30px;
+    font-weight: lighter;
+    background-color: #ADC8D9;
+    color: #4b4b50;
+    box-shadow: 5px 5px 10px gray;
+    padding-left: 20px;
+    border-left: 5px solid #829fb1;
+}
+
+p{
+    font-family: "OpenSans";
+    color: #4b4b50;
+    font-size: 24px;
+    margin-left: 20px;}
+b{
+    font-family: "OpenSans";
+    color: #434347;
+    font-size: 28px;}
+.podtheme{
+    border-left: 5px solid #F2C166;
+    padding-left: 10px;
+}
+
+ul,ol{
+    font-size: 24px;
+    font-family: "OpenSans";
+    color: #434347;
+    margin-left: 20px;}
+
+.img_center{
+    display: flex;
+    justify-content: center;}
+.img_center>img{
+    box-shadow: 5px 5px 10px grey;}
+
+.example_div{
+    display: flex;
+    justify-content: center;}
+.example{
+    font-size: 20px;
+    background-color: #b5d1e2;
+    border-color: #4b4b50;
+    width:fit-content;
+    margin-left: 100px;}
+
+.note{
+    color: #4b4b50;
+    font-size: 20px;
+    font-family:"OpenSans";
+    width: 800px;
+    margin-left: 25px;
+    box-shadow: 5px 5px 10px grey;
+    padding: 20px;
+}

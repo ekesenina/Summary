@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="../css/style_css.css" type="text/css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Конспект по CSS</h1>
+        </center>
+    </header>
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf1" class="button">Селекторы</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf1.1">Простые селекторы</a>
+                <a href="#paragraf1.2">Комбинированные селекторы</a>
+                <a href="#paragraf1.3">Селекторы псевдоклассов</a>
+                <a href="#paragraf1.4">Селекторы псевдоэлементов</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf2" class="button">Цвета в CSS</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf2.1">Подбор цветов</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf3" class="button">Размеры в CSS</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf3.1">Единицы измерения</a>
+                <a href="#paragraf3.2">Базовые свойства, связанные с размерами</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf4" class="button">Блочная модель</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf4.1">Внутренние отступы</a>
+                <a href="#paragraf4.2">Граница</a>
+                <a href="#paragraf4.3">Свойство margin</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf5" class="button">Слои, <br> позиционирование</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf5.1">Позиционирование </a>
+                <a href="#paragraf5.2">Слои и z-index</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf6" class="button">Свойство display</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf6.1">display: block;</a>
+                <a href="#paragraf6.2">display: inline;</a>
+                <a href="#paragraf6.3">display: none;</a>
+                <a href="#paragraf6.4">Display: inline-block;</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf7" class="button">Flexbox</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf7.1">Расположение по осям</a>
+                <a href="#paragraf7.2">Выравнивание по главной оси</a>
+                <a href="#paragraf7.3">Выравнивание по дополнительной оси</a>
+                <a href="#paragraf7.4">Порядок элементов</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf8" class="button">CSS Grid</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf8.1">Основы grid-раскладки</a>
+                <a href="#paragraf8.2">Как устроена grid-раскладка</a>
+                <a href="#paragraf8.3">Адаптивные гриды</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf9" class="button">@-rules</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf9.1">at rules (@-rules)</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="#paragraf10" class="button">Медиа-запросы</a>
+            </button>
+            <div class="dropdown_content">
+                <a href="#paragraf10.1">Медиа-запросы в CSS</a>
+            </div>
+        </div>
+        <div style="height:30px"></div>
+            <a href="#top" title="Вернуться к началу страницы" class="topButton"><img src="../img/Стрелка.png" alt="стрелка" width="70px" > </a>
+    </nav>
+    <main>
+        <section>
+            <center>
+                <h2 id="paragraf1"><b>1. Селекторы</b></h2>
+            </center>
+            <p>
+                &bull; <b>Селектор</b> определяет, какой элемент (или элементы) станет объектом определения стилей. <br> 
+                Свойство селектора отвечает за выбор характеристики для изменений. <br>
+                И наконец, его значение помогает определить, как именно что-либо необходимо изменить. Вся эта запись называется правило CSS. <br>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>h1 { color: red; <br>
+                        background: blue;}</code>
+                </p>
+                <ol>
+                    <li> Простые</li>
+                    <li> Комбинированные</li>
+                    <li> Селекторы псевдоклассов</li>
+                    <li> Селекторы псевдоэлементов</li>
+                </ol>
+            </p>
+            <article>
+                <h3 id="paragraf1.1">1.1 Простые селекторы</h3>
+                    <ul>
+                        <li>Селектор по тегу</li>
+                        <li>Селектор по идентификатору</li>
+                        <li>Селектор по атрибуту</li>
+                        <li>Селектор по классу</li>
+                    </ul>
+                    <p>
+                        &bull;<b>Селектор по тегу</b> позволяет выбрать на странице все элементы какого-либо типа, например, параграфы, заголовки, блоки и так далее. Для использования этого типа простых селекторов надо записать тег без скобок
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>p{color: #543424;<br>
+                                font-size: 24px;<br>
+                                font-family:"NotoSans";}
+                            </code>
+                        </p>
+                    </p>
+                    <p>
+                        <a href="Class_selectors.html" target="_blank">&bull;<b>Селектор по классу</b></a>
+                            — самый распространённый вариант в современной вёрстке. Он позволяет разработчику самостоятельно выбрать элементы, к которым будет применён стиль. Правда, сначала придётся внести изменения в HTML.
+                        <p>
+                            <ul class="list_in_paragraf">
+                                <li>Класс не может начинаться с цифры.</li>
+                                <li>Класс не может содержать пробел.</li>
+                                <li>Класс нужно называть буквами латинского алфавита.</li>
+                                <li>Класс чувствителен к регистру: Food и food — два разных класса.</li>
+                                <li>Класс может начинаться и содержать дефис - и/или нижнее подчеркивание _.</li>
+                            </ul>
+                        </p>
+                    </p>
+                    <p>
+                        <a href="ID_selectors.html" target="_blank">&bull;<b>Селектор по идентификатору</b></a> 
+                            определяет уникальное имя элемента, которое используется для изменения его стиля и обращения к нему через скрипты. В HTML он обозначается при помощи букв <b>id</b> 
+                        <p class="example">
+                            <strong>&bull; В html</strong> <br>
+                            <code>
+                                &lt;li id="Sofa"&gt;Переобивка дивана&lt;/li&gt;
+                            </code> <br> <br>
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>
+                                #Sofa {color: red:} 
+                            </code>
+                        </p>
+                        <p>
+                            <strong>Имя идентификатора выбирают, следуя тем же правилам, что и для классов:</strong>
+                            <ul class="list_in_paragraf">
+                                <li>Не может начинаться с цифры.</li>
+                                <li>Не может содержать пробел.</li>
+                                <li>Нужно называть буквами латинского алфавита.</li>
+                                <li>Чувствителен к регистру: Sofa и sofa — два разных идентификатора.</li>
+                                <li>Может начинаться и содержать дефис - и/или нижнее подчеркивание _.</li>
+                            </ul>
+                            <p class="note"> &bull;Учитывая, что основное свойство идентификатора — <strong>уникальность</strong>, его применение для целей назначения стилей должно быть <strong>очень ограниченным</strong>.
+                            Излишняя специфичность приведёт к <strong>большей трудоёмкости</strong> (только представьте, сколько стилей придётся назначать идентификаторам в большом проекте).
+                            Кроме того, именно у идентификатора самый большой приоритет среди селекторов, то есть стили, назначенные при помощи селектора по идентификатору, очень сложно менять.
+                            </p>
+                        </p>
+                    </p>
+                    <p>
+                        <a href="Attribute_selectors.html" target="_blank">&bull;<b>Селектор по атрибуту</b></a> позволяет обратиться к элементу HTML по значению его атрибутов, записывается при помощи квадратных скобок.
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>
+                                a[href="#Food"] {background: orange;} <br>
+                                a[href] {background: orange;}
+                            </code>
+                            
+                        </p>
+                    </p>
+            </article>
+            <article>
+                <h3 id="paragraf1.2">1.2 Комбинированные селекторы</h3>
+                <p>&bull;Комбинированные селекторы <strong>образуются из простых селекторов</strong> по специальным правилам.</p>
+                <p>
+                    &bull;<b>Простой комбинатор (запятая)</b> выбирает все совпадающие узлы.
+                    <p class="example">
+                        <strong>&bull; Синтаксис</strong> <br>
+                            селектор-1, селектор-2 <br>
+                            div, p выберет оба элемента: и &lt;div&gt;, и &lt;p&gt;. <br> <br>
+                         <strong>&bull; В CSS</strong> <br>
+                        <code><strong>div,p</strong>{color: #543424;<br>
+                            font-size: 24px;<br>
+                            font-family:"NotoSans";}
+                        </code>
+                    </p>
+                </p>
+                <p>
+                    &bull;<b>Комбинатор потомков (пробел)</b> выбирает элементы, которые находятся внутри указанного элемента (вне зависимости от уровня вложенности).
+                    <p class="example">
+                        <strong>&bull; Синтаксис</strong> <br>
+                            селектор-1 селектор-2 (через пробел) <br>
+                            div p выберет все элементы &lt;p&gt;, которые находятся внутри элемента &lt;div&gt;. <br> <br>
+                         <strong>&bull; В CSS</strong> <br>
+                        <code><strong>div p</strong>{color: #543424;<br>
+                            font-size: 24px;<br>
+                            font-family:"NotoSans";}
+                        </code>
+                    </p>
+                </p>
+                <p>
+                    &bull;<b>Комбинатор дочерних элементов (&gt;)</b> , в отличие от пробела, выбирает только дочерние элементы.
+                    <p class="example">
+                        <strong>&bull; Синтаксис</strong> <br>
+                            селектор-1 &gt; селектор-2 <br>
+                            div &gt; img выберет только дочерние, первого уровня вложенности, элементы &lt;img&gt;. <br> <br>
+                         <strong>&bull; В CSS</strong> <br>
+                        <code><strong>div&gt;p</strong>{color: #543424;<br>
+                            font-size: 24px;<br>
+                            font-family:"NotoSans";}
+                        </code>
+                    </p>
+                </p>
+                <p>
+                    &bull;<b>Комбинатор соседних элементов (~) </b> выбирает элементы, которые находятся на этом же уровне вложенности, после указанного элемента, с тем же родителем.
+                    <p class="example">
+                        <strong>&bull; Синтаксис</strong> <br>
+                            селектор-1 ~ селектор-2 <br>
+                            p ~ .cat выберет все элементы с классом cat, которые находятся после элемента &lt;p&gt; внутри одного родителя. <br> <br>
+                         <strong>&bull; В CSS</strong> <br>
+                        <code><strong>p~.cat</strong>{color: #543424;<br>
+                            font-size: 24px;<br>
+                            font-family:"NotoSans";}
+                        </code>
+                    </p>
+                </p>
+                <p>
+                    &bull;<b>Комбинатор следующего соседнего элемента (+) </b> выбирает элемент, который находится сразу после указанного элемента, внутри одного родителя.
+                    <p class="example">
+                        <strong>&bull; Синтаксис</strong> <br>
+                            селектор-1 + селектор-2 <br>
+                            .header + .container выберет элемент с классом container, который находится непосредственно после элемента с классом header. <br> <br>
+                         <strong>&bull; В CSS</strong> <br>
+                        <code><strong>.header + .container</strong>{color: #543424;<br>
+                            font-size: 24px;<br>
+                            font-family:"NotoSans";}
+                        </code>
+                    </p>
+                </p>
+            </article>
+            <article>
+                <h3 id="paragraf1.3">1.3 Селекторы псевдоклассов</h3>
+                <p>&bull;<a href="Pseudo-classes.html" target="_blank"><b>Псевдоклассы</b></a> определяют специальные состояния элементов. Они обязательно относятся к какому-либо селектору, записываются через двоеточие.</p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            a:visited {color: red;}
+                        </code>
+                    </p>
+                <p><strong>Самые частые:</strong></p>
+                <ul class="list_in_paragraf">
+                    <li><strong>:hover</strong> (наведение на объект, чаще всего кнопку или ссылку).</li>
+                    <li><strong>:visited</strong> (посещённая ранее ссылка).</li>
+                    <li><strong>:focus</strong> (элемент с фокусом на нём, например, элемент формы).</li>
+                    <li><strong>:first-child</strong> и <strong>:last-child</strong> (первый и последний подобный встречающийся элемент, например, li:first-child первый элемент списка).
+                        <ul class="list_in_paragraf">
+                            <li><strong>:nth-child(число)</strong> (касается конкретного элемента, например, li:nth-child(2) — второй элемент &lt;li&gt;)</li>
+                            <li><strong>:nth-child(odd)</strong> (все нечётные элементы)</li>
+                            <li><strong>:nth-child(even)</strong> (все чётные элементы)</li>
+                        </ul>
+                    </li>
+                    <li><strong>:first-of-type</strong> и <strong>:nth-of-type</strong> (первый и n-ный элемент какого-либо типа).</li>
+                    <li><strong>:disabled</strong> (недоступный элемент, например, button:disabled — кнопка, на которую невозможно нажать).</li>
+                </ul>
+            </article>
+            <article>
+                <h3 id="paragraf1.4">1.4 Селекторы псевдоэлементов</h3>
+                <p>&bull;<a href="Pseudo-elements.html" target="_blank"><b>Псевдоэлементы</b></a> используются для того, чтобы сделать страницу более удобной для пользователя. Они стилизуют часть выбранного элемента. Записываются после двух двоеточий без пробела.</p>
+                <ul class="list_in_paragraf">
+                    <li><strong>::first-line</strong>  может изменить стиль первой строки. Например, абзаца. </li>
+                    <li><strong>::before</strong> добавляет что-то перед началом элемента. Например, в примере со списком покупок, если бы появились какие-то новые пункты, мы могли бы создать для них специальный класс (в HTML: class="newads"), а потом поставить для обозначения какой-то символ, используя  .newads::before.</li>
+                    <li><strong>::after</strong> добавляет что-то после окончания элемента.</li>
+                </ul>
+                <h3>
+                <center>
+                    Больше о псевдоклассах и псевдоэлементах:
+                </center>
+                </h3>
+                <iframe src="../img/Псевдоклассы, псевдоэлементы.pdf"
+                    frameborder="2px"
+                    width="1200px"
+                    height="500px">
+                </iframe>
+                <p>
+                    <ul>
+                        <p id="advice">Слишком много правил? Именно поэтому в большинстве случаев легче следовать <strong>best practices:</strong></p>
+                        <li><strong>Используйте преимущественно селекторы классов.</strong> Даже если речь идёт о заголовке или другом уникальном элементе.</li><br>
+                        <li><strong>Не применяйте к одному элементу чрезмерное количество классов.</strong></li><br>
+                        <li><strong>Избегайте встроенных стилей</strong>, таких как &lt;a style="color: red;"&gt;.</li><br>
+                        <li><strong>Не рассчитывайте на модификатор !important.</strong> Лучше, если вы просто будете знать о его существовании, но не более.</li><br>
+                    </ul>
+                </p>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf2"><b>2. Цвета в CSS</b></h2>
+                <div class="container">
+                    <div class="block one"><center><p>Block one</p></center></div>
+                    <div class="block two"><center><p>Block two</p></center></div>
+                    <div class="block three"><center><p>Block three</p></center></div>
+                </div>
+                <h3 id="paragraf2.1">Подбор цветов:</h3>
+                <iframe src="https://colorscheme.ru" frameborder="0" width="1200px" height="700px"></iframe>
+            </center>
+            <ul class="list_in_paragraf">
+                <li><b>Контраст</b> позволит выбрать два цвета для оформления<br></li>
+                <li><b> Триада и тетрада</b> — три и четыре, соответственно<br></li>
+                <li><b> Аналогия</b> нужна для поиска комплементарного оттенка<br></li>
+                <li><b> Акцент-аналогия </b>позволит выбрать и комплементарные оттенки, и контрастный цвет</li>
+            </ul>
+            <p>&bull;Свойство<b> color</b> задаёт цвет элементу:</p>
+            <p class="example">
+                <strong>&bull; В CSS</strong> <br>
+                <code>
+                    p {<strong>color:</strong> black; <br>
+                    font: 12px fantasy;}
+                </code>
+            </p>
+            <p>&bull;Свойство<b> background-color</b> задаёт фон элемента:</p>
+            <p class="example">
+                <strong>&bull; В CSS</strong> <br>
+                <code>
+                    p {color: black; <br>
+                        font: 12px fantasy;} <br>
+                    div {<strong>background-color: </strong> #2DD700; <br>
+                        width: 600px; <br>
+                        height: 100px;}
+                </code>
+            </p>
+            <p>&bull;Свойство<b> border-color</b> задаёт цвет границы (но перед тем, как задавать цвет, нужно определиться с её толщиной и дополнительными свойствами):</p>
+            <p class="example">
+                <strong>&bull; В CSS</strong> <br>
+                <code>
+                    p {color: black; <br>
+                        font: 12px fantasy;}br
+                    div {background-color: #2DD700;<br>
+                        width: 600px;<br>
+                        height: 100px;<br>
+                        <strong>border:</strong> 2px dashed;<br>
+                        <strong>border-color:</strong> black;}
+                </code>
+            </p>
+            <p>&bull;Свойство<b> background-image</b> задаёт фоновую картинку:</p>
+            <p class="example">
+                <strong>&bull; В CSS</strong> <br>
+                <code>
+                    #background-image{<strong>background-image:</strong> url(../img/фон.png);<br>
+                        width: 400px;<br>
+                        height: 400px;}
+                </code>
+            </p>
+            <p>&bull;Пример:
+                <center>
+                <div id="background-image">
+                    <p>Hello! <br> <br>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore delectus dolor molestias vero laudantium modi optio facere voluptatibus aut, quos esse ullam perferendis tenetur magnam amet voluptatem animi totam sapiente.
+                    </p>
+                </div>
+                </center>
+            </p>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf3"><b>3. Размеры в CSS</b></h2>
+            </center>
+            <article>
+                <h3 id="paragraf3.1">3.1 Единицы измерения</h3>
+                <p>&bull;<b>Абсолютные единицы измерения</b> обозначают физический размер — дюймы, сантиметры, миллиметры, пункты, пики, а также пиксели.
+                    <ul class="list_in_paragraf">
+                        <li><b>px</b> - Пиксель</li>
+                        <li><b>in</b> - Дюйм (1 дюйм равен 2,54 см)</li>
+                        <li><b>cm</b> - Сантиметр</li>
+                        <li><b>mm</b> - Миллиметр</li>
+                        <li><b>pt</b> - Пункт (1 пункт равен 1/72 дюйма)</li>
+                        <li><b>pc</b> - Пика (1 пика равна 12 пунктам)</li>
+                    </ul>
+                </p>
+                <p>&bull;Большинство<b> относительных единиц</b> измерения используются для определения размеров шрифта.
+                    <ul class="list_in_paragraf">
+                        <li><b>em</b> - Размер шрифта текущего элемента</li>
+                        <li><b>ex</b> - Высота символа x</li>
+                        <li><b>ch</b> - Ширина символа 0 текущего элемента</li>
+                        <li><b>rem</b> - Размер шрифта корневого элемента</li>
+                    </ul>
+                    <p>Существует также группа относительных единиц измерения, зависящая от области просмотра браузера (viewport). Их тоже несколько:
+                        <ul class="list_in_paragraf">
+                            <li><b>vw</b> - 1% от ширины viewport</li>
+                            <li><b>vh</b> - 1% от высоты viewport</li>
+                            <li><b>vmin</b> - 1% от меньшего измерения viewport</li>
+                            <li><b>vmax</b> - 1% от большего измерения viewport</li>
+                        </ul>
+                    </p>
+                </p>
+            </article>
+            <article>
+                <h3 id="paragraf3.2">3.2 Базовые свойства, связанные с размерами</h3>
+                <ul class="list_in_paragraf">
+                    <ul class="list_in_paragraf">
+                    <li><b>width</b> — ширина. Если раньше задать размер ширины любого блочного элемента в пикселях было нормой, то теперь при вёрстке часто нужно прибегать к свойствам, позволяющим адаптировать размер. Для ширины это:</li>
+                        <ul class="list_in_paragraf">
+                            <li><b>min-width</b> — минимально возможная ширина элемента,</li>
+                            <li><b>max-width</b>— максимально возможная ширина элемента.</li>
+                        </ul>
+                    </ul>
+                    <ul class="list_in_paragraf">
+                        <li><b>height</b>— высота. Свойства, позволяющие адаптировать высоту:</li>
+                        <ul class="list_in_paragraf">
+                            <li><b>min-height</b>— минимально возможная высота элемента,</li>
+                            <li><b>max-height</b> — максимально возможная высота элемента.</li>
+                        </ul>
+                    </ul>
+                    <ul class="list_in_paragraf">
+                        <li><b>font-size</b>— размер шрифта.</li>
+                    </ul>
+                </ul>
+                <a href="sizes_css.html"><b>&bull;Тренажер по размерам CSS</b></a>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf4"><b>4. Блочная модель документа</b></h2>
+            </center>
+            <p>&bull;Основой блока выступает его содержимое (текст, картинка, видео), ширина которого задаётся свойством <b>width</b>, а высота — <b>height</b>. Вокруг содержимого идут поля <b>(padding)</b>, они создают пустое пространство от содержимого до внутреннего края границ; затем идут границы <b>(border)</b>, а вокруг границ отступы <b>(margin)</b>. Порядок этих свойств в блоке чётко определён и не может быть нарушен. Но при этом определение ни одного из этих свойств не является обязательным.</p>
+            <center>
+                <img src="../img/Блочная_модель.jpg" alt="img_Блочная модель">
+            </center>
+            <article>
+                <h3 id="paragraf4.1">4.1 Внутренние отступы</h3>
+                <p>
+                    &bull; Свойство <b>padding</b> устанавливает пустое поле между содержимым элемента и его границей. Использование этого свойства повышает читаемость текста, улучшает внешний вид страницы. <br><br>
+                    <ul class="list_in_paragraf">
+                        <li>
+                            У свойства padding может быть<b> до четырёх</b> значений, которые определяют поля с каждой из сторон. Значения перечисляют, начиная с верха, продолжают правым полем, затем — нижним, завершают — левым. То есть по часовой стрелке. <br>
+                            <p class="example">
+                                <strong>&bull; В CSS</strong> <br>
+                                <strong>padding:</strong> верх право низ лево; <br>
+                                <code><strong>padding:</strong> 4px 8px 15px 2px;</code>
+                            </p>
+                        </li>
+                        <li>
+                            <b>Три</b> значения свойства возможны в том случае, если размеры полей справа и слева совпадают. <br>
+                            <p class="example">
+                                <strong>&bull; В CSS</strong> <br>
+                                <strong>padding:</strong> верх право-лево низ; <br>
+                                <code><strong>padding:</strong> 4px 4px 15px;</code>
+                            </p>
+                        </li>
+                        <li>
+                            <b>Два</b> значения задают поля сначала по вертикали, потом по горизонтали. <br>
+                            <p class="example">
+                                <strong>&bull; В CSS</strong> <br>
+                                <strong>padding:</strong> верх-низ право-лево; <br>
+                                <code><strong>padding:</strong> 4px 2px;</code>
+                            </p>
+                        </li>
+                        <li>
+                            Наконец,<b> одно</b> значение задаст поля со всех сторон.
+                        </li>
+                    </ul>
+                    <p>&bull; Для задания полей с одной или двух сторон можно использовать развернутую запись свойства<b> padding:</b></p>
+                    <ul class="list_in_paragraf">
+                        <li><b>padding-top</b> — изменит поле сверху;</li>
+                        <li><b>padding-right</b>— справа;</li>
+                        <li><b>padding-bottom</b>— снизу;</li>
+                        <li><b>padding-left </b>— слева.</li>
+                    </ul>
+                    <p class="note">&bull; Цвет фона, применённый ко всему блоку, останется и после определения внутренних отступов. Значит, если содержимым блока окажется фотография, вы сможете задать ей рамку любого желаемого цвета.</p>
+                </p>
+            </article>
+            <article>
+                <h3 id="paragraf4.2">4.2 Граница</h3>
+                <p>&bull; Свойство<b> border</b> задаёт вокруг области контента границу определённой толщины, стиля и цвета. Эти значения необходимо последовательно указать через пробел, обязательно нужно задать только стиль.</p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>div {background-color: yellow; <br>
+                        width: 100px;<br>
+                        height: 100px;<br>
+                        <strong>border:</strong> 3px dashed black;}
+                    </code>
+                </p>
+                <p class="note">&bull; Можно использовать отдельные свойства<strong> border-width, border-style, border-color.</strong></p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>div {background-color: yellow;<br>
+                        width: 100px;<br>
+                        height: 100px;<br>
+                        <strong>border-width:</strong> 3px;<br>
+                        <strong>border-style:</strong> double;<br>
+                        <strong>border-color:</strong> black;}
+                    </code>
+                </p>
+                <p>&bull; Толщину границы<b> (border-width)</b> можно задать в пикселях или любых других единицах измерения. Но существует также возможность использовать словесное описание. Thin — тонкая граница, medium — средней толщины, thick — толстая. Перевода описания в конкретные единицы измерения не существует. А выглядит каждая из них так:
+                    <center>
+                        <img src="../img/Границы.jpg" alt="image">
+                    </center>
+                </p>
+                <p>&bull;Стиль границы<b> (border-style)</b> может принимать восемь значений. У двух самых востребованных — solid и double — особенностей почти нет. Вид точек и тире в браузерах отличается, поэтому значения dotted и dashed нужно использовать с осторожностью. Для groove, ridge, inset и outset лучше задавать два цвета, так как эти значения связаны с переходом цветов. </p>
+                <p class="note">&bull; Cтиль границы нужно определять обязательно — либо свойством border-style, либо в общем свойстве border. Иначе она просто не появится. </p>
+                    <center>
+                        <img src="../img/border_style.jpg" alt="image">
+                    </center>
+                <p><strong>&bull; В CSS</strong></p> <br>
+                <div id="border-style">
+                    <div class="example_border" id="border_one">
+                        <code>.one {border-width: 10px; <br>
+                            border-style: solid; <br>
+                            border-color: black;} <br>
+                        </code>
+                    </div>
+                    <div class="example_border" id="border_two">
+                        <code>.two {background-color: white;<br>
+                            border-width: 10px;<br>
+                            border-style: double;<br>
+                            border-color: black;}
+                        </code>
+                    </div>
+                    <div class="example_border" id="border_three">
+                        <code>.three {border-width: 10px;<br>
+                            border-style: dotted;<br>
+                            border-color: black;}
+                        </code>
+                    </div>
+                    <div class="example_border" id="border_four">
+                        <code>.four {border-width: 10px;<br>
+                            border-style: dashed;<br>
+                            border-color: black;}
+                        </code>
+                    </div>
+                    <div class="example_border" id="border_five">
+                        <code>.five {border-width: 10px;<br>
+                            border-style: groove;<br>
+                            border-color: black yellow;}
+                        </code>
+                    </div>
+                    <div class="example_border" id="border_six">
+                        <code>.six {border-width: 10px;<br>
+                            border-style: ridge;<br>
+                            border-color: black yellow;}
+                        </code>
+                    </div>
+                    <div class="example_border" id="border_seven">
+                        <code>.seven {border-width: 10px;<br>
+                            border-style: inset;<br>
+                            border-color: black yellow;}
+                        </code>
+                    </div>
+                    <div class="example_border" id="border_eight">
+                        <code>.eight {border-width: 10px;<br>
+                            border-style: outset;<br>
+                            border-color: black yellow;}
+                        </code>
+                    </div>
+                </div>
+                <p>
+                    &bull; Цвет границы <b>(border-color)</b> можно задавать в любой удобной системе. Обратите внимание, что значение<b> transparent</b> (прозрачный) относится именно к цветам, а не к стилям границы. <br>
+                    Кроме того, как и в случае с padding, есть возможность задать границу только для одной стороны border-top, border-right, border-bottom, border-left. <br>
+                    &bull; К отдельным свойствам границы, которые невозможно задать в сокращённом варианте, относится<b> border-radius</b>. Оно позволяет закруглить края элемента. 
+                </p>
+                <div id="border-radius">
+                    <div class="d1"></div>
+                    <div>
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>.d1{display: flex;<br>
+                                width: 400px;<br>
+                                height: 400px;<br>
+                                background: rgb(201, 151, 151);<br>
+                                <strong>border-radius:</strong> 50%;<br>
+                                margin: 40px;<br>
+                                border: 5px dotted;}
+                            </code>
+                        </p>
+                    </div>
+                    <div class="d2"></div>
+                    <div>
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>.d2{width: 300px; <br>
+                                height: 400px; <br>
+                                background: rgb(113, 195, 148); <br>
+                                <strong>border-radius:</strong> 300px/200px; <br>
+                                margin: 40px; <br>
+                                border: 5px dashed;}
+                            </code>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3 id="paragraf4.3">4.3 Свойство margin</h3>
+                <p>&bull; Свойство<b> margin</b> устанавливает пустой отступ от внешнего края границы, или внутреннего отступа, или содержимого блока. У margin нет своего фона, поэтому это свойство принимает фон родительского элемента. <br>
+                    &bull; Благодаря margin можно задавать отступы от соседних блоков и элементов. По аналогии с padding значения перечисляют, начиная с верха, продолжают правым полем, затем — нижним, завершают — левым. То есть по часовой стрелке.
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <strong>margin:</strong> верх право низ лево; <br>
+                        <code>
+                            <strong>margin:</strong> 14px 18px 5px 12px;
+                        </code>
+                    </p>
+                </p>
+                <p>&bull; <b>Три</b> значения свойства возможны в том случае, если размеры отступов справа и слева совпадают. <br>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <strong>margin:</strong> верх право-лево низ;<br>
+                        <code>
+                            <strong>margin:</strong> 4px 4px 15px;
+                        </code>
+                    </p>
+                </p>
+                <p>&bull; <b>Два</b> значения задают отступам сначала по вертикали, потом по горизонтали. <br>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <strong>margin:</strong> верх-низ право-лево;<br>
+                        <code>
+                            <strong>margin:</strong> 4px 2px;
+                        </code>
+                    </p>
+                </p>
+                <p>&bull; <b>Одно</b> значение margin задаст одинаковые отступы со всех сторон. Точно так же, как и у padding, возможно применение частных свойств: <strong>margin-top, margin-right, margin-bottom, margin-left</strong>. Единицами измерения margin могут быть пиксели, em, rem и так далее. Проценты берутся от ширины всего блока.</p>
+                <p class="note">
+                    <ul>Но в отличие от <strong>padding:</strong> 
+                        <li>Значение margin может быть <strong>отрицательным</strong>. То есть, допустим, margin-top: -15px; означает, что блок сдвинется вверх на 15 пикселей, margin-left: 40px; приведёт к перемещению блока вправо на 40 пикселей.</li>
+                        <li>margin может принимать значение <strong>auto</strong>. В сочетании с шириной элемента, заданной при помощи свойства width, такое значение позволяет выровнять содержимое элемента по горизонтали.</li>
+                    </ul>
+                </p>
+                <a href="margin_padding.html" target="_blank">&bull;<strong> Тренажёр:</strong> Границы. Внутренние и внешние отступы</a>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf5">Слои, позиционирование и z-index</h2>
+            </center>
+            <article>
+                <h3 id="paragraf5.1">5.1 Позиционирование </h3>
+                <p><a href="position.html" target="_blank"><b>Position</b></a> — одно из свойств, позволяющих расположить элементы в порядке, отличном от классического потока документа.</p>
+                <div>
+                    <p class="list_in_paragraf">Дополнительные свойства, которые определяют расположение элемента:
+                        <ul class="list_in_paragraf">
+                            <li>top</li>
+                            <li>right</li>
+                            <li>bottom</li>
+                            <li>left</li>
+                        </ul>
+                    </p>
+                    <p class="list_in_paragraf">Однако дополнительные свойства не будут работать, если не установлено значение position. К значениям относятся: 
+                        <ul class="list_in_paragraf">
+                            <li>static</li>
+                            <li>relative</li>
+                            <li>fixed</li>
+                            <li>absolute</li>
+                            <li>sticky</li>
+                        </ul>
+                    </p>
+                </div>
+                <p>&bull; <b>Position: static;</b> <br> Элемент находится в обычном состоянии, расположен на своём месте в документе. Свойства top, right, bottom, left и z-index не применяются к такому элементу. Это значение по умолчанию. <br>
+                    Элемент считается позиционированным, только если значение position отлично от static.
+                </p>
+                <p>&bull; <b>Position: relative;</b> <br>
+                    Элемент с этим значением позиционируется относительно своего нормального положения при помощи свойств top, right, bottom и left.<br>
+                    <img src="../img/relative.jpg" alt="image"><br>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            div {display: inline-block;<br>
+                            width: 100px;<br>
+                            height: 100px;}<br>
+                          .red {background-color: red;<br>
+                            <strong> position: relative;</strong><br>
+                            top: 150px;<br>
+                            left: 20px;}<br>
+                          .yellow {background-color: yellow;}<br>
+                          .blue {background-color: blue;}
+                        </code>
+                    </p>
+                </p>
+                <p>&bull; <b>Position: fixed;</b><br>
+                    Элемент позиционируется относительно viewport, то есть его положение всегда остаётся неизменным при использовании прокрутки.<br>
+                    &bull; Такое значение часто используется, чтобы зафиксировать верхнюю часть в начале страницы и оставить её доступной постоянно. Также в последнее время часто используют для всплывающего чата в нижней части экрана. <br>
+                    &bull; Элемент с position: fixed; не оставляет никакого зарезервированного пространства в том месте, где он определён в документе изначально.<br>
+                    <img src="../img/fixed.jpg" alt="image"><br>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            div {display: inline-block;<br>
+                                width: 100px;<br>
+                                height: 100px;}<br>
+                              .red {background-color: red;<br>
+                                <strong>position: fixed;</strong><br>
+                                top: 50px;<br>
+                                left: 50px;}<br>
+                              .yellow {background-color: yellow;}<br>
+                              .blue {background-color: blue;}
+                        </code>
+                    </p>
+                </p>
+                <p>&bull; <b>Position: absolute;</b><br>
+                    Элемент позиционируется относительно ближайшего предка (вместо позиционированного относительно окна просмотра, как fixed). Если элемент с абсолютным позиционированием не имеет позиционированных предков, он использует тело документа и перемещается вместе с прокруткой страницы. <br>
+                    &bull; Родителю, относительно которого хочется спозиционировать элемент, часто добавляется свойство position: relative; без указания дополнительных свойств top, right, bottom и left. Таким образом, родительский элемент никак визуально не меняется, а необходимый элемент смещается относительно него. <br>
+                </p>
+                <p>&bull; <b>Position: sticky;</b> <br>
+                    Элемент позиционируется на основе позиции прокрутки пользователя. Можно перевести как «липкое» позиционирование. <br>
+                    &bull; Position: sticky; переключает элемент между relative и fixed-позиционированием. Relative используется, пока положение по умолчанию остаётся во viewport. Когда скролл проходит дальше, включается fixed-позиционирование.
+                </p>
+            </article>
+            <article>
+                <h3 id="paragraf5.2">5.2 Слои и z-index </h3>
+                <p>&bull; Свойство<b> z-index </b>определяет порядок (какой элемент должен быть расположен сверху или снизу других). Это свойство может иметь как положительные, так и отрицательные значения. Элемент с большим значением перекрывает элемент с меньшим значением. <br>
+                        <p class="note">&bull; Если два позиционированных элемента перекрываются без указания z-индекса, элемент, размещённый последним в коде HTML, будет показан сверху.</p>
+                </p>
+                <p> &bull; У каждого элемента в CSS есть определённое место на экране, которое характеризуется координатами X и Y, но если бы существовали только эти две координаты, то мы бы не смогли накладывать один элемент поверх другого. Поэтому существует ещё одна координата — пространственная координата Z. Поэтому z-index так и называется: по сути, это номер слоя, координата по оси Z. <br>
+                        <p class="note">&bull; Позиционирование и указание свойства z-index создаёт контекст наложения (stacking context).</p>
+                </p>
+                <p><a href="position_z-index.html" target="_blank"><b>&bull; Тренажёр по теме "Слои, позиционирование и z-index"</b></a></p>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf6">Свойство display</h2>
+            </center>
+            <p><b>&bull; Display type</b> отвечает за характер отображения элемента HTML. </p>
+            <p  class="list_in_paragraf">Есть три базовых значения этого свойства:
+                <ol class="list_in_paragraf">
+                    <li>display: block;</li>
+                    <li>display: inline;</li>
+                    <li>display: none;</li>
+                </ol>
+            </p>
+            <article>
+                <h3 id="paragraf6.1">6.1 display: block;</h3>
+                <p><b>&bull; display: block;</b> полностью меняет ситуацию для строчных элементов. Как видно из примера, span, при помощи которого обычно меняют стиль конкретного элемента текста, теперь занимает всю предоставленную ширину, и ему можно задать высоту. <br><br>
+                    &bull; Элемент, которому присвоено свойство display со значением block, ведёт себя как блочный, вне зависимости от того, является ли он таковым на самом деле.</p>
+                    <span class="dis_bl red"></span>
+                    <span class="dis_bl yellow"></span>
+                    <span class="dis_bl green"></span>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;span class="red"&gt;&lt;/span&gt;<br>
+                            &lt;span class="yellow"&gt;&lt;/span&gt;<br>
+                            &lt;span class="green"&gt;&lt;/span&gt;<br>
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            span{<strong>display: block;</strong><br>
+                                height: 100px;}<br>
+                            .red{background-color:rgb(204, 99, 99);}<br>
+                            .yellow {background-color:rgb(255, 231, 73);}<br>
+                            .green {background-color:rgb(104, 194, 104);}<br>
+                        </code>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3 id="paragraf6.2">6.2 display: inline;</h3>
+                <p><b>&bull; Display: inline;</b>, наоборот, заставляет блочные элементы вести себя как строчные. Если у элемента используется это значение, то он ведёт себя как строчный (такие элементы располагаются на той же строке, последовательно). Ширина и высота элемента определяются по содержимому, и изменить их нельзя. Задать какие-либо значения размеров для пустого элемента можно при помощи отступов и границ, как это сделано в примере ниже.</p>
+                    <div class="display">
+                        <div class="dis_in red2"></div>
+                        <div class="dis_in yellow2"></div>
+                        <div class="dis_in green2"></div>
+                    </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;div class="red"&gt;&lt;/div&gt;<br>
+                            &lt;div class="yellow"&gt;&lt;/div&gt;<br>
+                            &lt;div class="green"&gt;&lt;/div&gt;<br>
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            div{<strong>display:inline;</strong><br>
+                                margin-left: 30px;<br>
+                                padding: 100px;}<br>
+                                .red {background-color:rgb(204, 99, 99);}<br>
+                                .yellow {background-color:rgb(255, 231, 73);}<br>
+                                .green {background-color:rgb(104, 194, 104);}
+                        </code>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3 id="paragraf6.3">6.3 display: none;</h3>
+                <p>&bull; Элемент с присвоенным свойством <b> display: none;</b> полностью исчезнет из вёрстки страницы. Для него не будет зарезервировано место, о его наличии можно будет узнать только из структуры файла. <br><br>
+                    &bull; Это свойство часто используется для организации выпадающего меню на страницах. Оно должно быть видно, только когда пользователь наводит мышкой на пункт, в остальное время меню никак себя не проявляет. То есть всем его элементам присвоено свойство display: none;.
+                </p>
+                <div class="display">
+                    <div class="dis_none red3"></div>
+                    <div class="dis_none yellow3"></div>
+                    <div class="dis_none green3"></div>
+                </div>
+                <div class="example_div"> 
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;div class="red"&gt;&lt;/div&gt;<br>
+                            &lt;div class="yellow"&gt;&lt;/div&gt;<br>
+                            &lt;div class="green"&gt;&lt;/div&gt;<br>
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            div{<strong>display:inline;</strong><br>
+                                padding: 100px;}<br>
+                                .red3 {display: none;<br>
+                                    background-color:rgb(204, 99, 99);}<br>
+                                .yellow3 {background-color:rgb(255, 231, 73);}<br>
+                                .green3 {background-color:rgb(104, 194, 104);}
+                        </code>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3 id="paragraf6.4">6.4 Display: inline-block;</h3>
+                <p><b>Display: inline-block;</b> позволяет элементу оставаться внутри строки, но при этом сохранять ряд блочных свойств, самые важные из которых — размеры.</p>
+                    <div class="dis_in_bl red4"></div>
+                    <div class="dis_in_bl yellow4"></div>
+                    <div class="dis_in_bl green4"></div>
+                <div class="example_div">
+                    <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="red"&gt;&lt;/div&gt;<br>
+                        &lt;div class="yellow"&gt;&lt;/div&gt;<br>
+                        &lt;div class="green"&gt;&lt;/div&gt;<br>
+                    </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            div {<strong>display: inline-block;</strong> <br>
+                                width: 100px;<br>
+                                height: 100px;}<br>
+                                .red {background-color: red;}<br>
+                                .yellow {background-color: yellow;}<br>
+                                .green {background-color: green;}
+                        </code>
+                    </p>
+                </div>
+            </article>
+            <article>
+                <a href="display.html" target="_blank">&bull; <b>Тренажёр по свойству display</b> </a>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf7">Flexbox</h2>
+            </center>
+            <p>&bull; С помощью флексбокса можно верстать как крупные блоки, из которых состоит сайт, так и его составные части. Его можно использовать для элементов внутри шапки, ряда карточек в каталоге, кнопок в формах и других элементах интерфейса. Флексбокс заменяет inline-block, у которого есть определённые проблемы (пробелы между элементами).</p>
+            <article>
+                <h3>Как устроен флексбокс?</h3>
+                <p>&bull; Ранее мы задавали значения свойства display каждому элементу, который нужно как-то расположить. С флексбоксом мы сначала создаём обёртку — родительский элемент или контейнер. Ему мы задаём свойство display: flex. <br> <br>
+                    &bull; Непосредственные потомки этого контейнера станут флекс-элементами, мы можем управлять их расположением и порядком. В роли контейнера часто выступает элемент &lt;div&gt;, это специальный элемент-обёртка, не несущий никакой смысловой нагрузки. Но флекс-контейнером может выступать любой другой элемент, например список &lt;ul&gt;.
+                </p>
+            </article>
+            <article>
+                <h3 id="paragraf7.1">7.1 Расположение по осям</h3>
+                <p>&bull; Флекс-элементы выстраиваются внутри контейнера вдоль главной оси. По умолчанию она проходит горизонтально, слева направо, но это можно изменить.</p>
+                    <img src="https://lms.skillfactory.ru/assets/courseware/v1/dea6a9ed5e3098f8f56bb7d28061e99c/asset-v1:Skillfactory+FR+2020+type@asset+block/FR-A3-flex1.gif" alt="gif" class="img_center">
+                <p>&bull; Кроме основной оси, есть дополнительная, перпендикулярная основной, она по умолчанию проходит сверху вниз. Вы можете выравнивать элементы по обеим осям.</p>
+                    <img src="https://lms.skillfactory.ru/assets/courseware/v1/9a87d992aff9ac070fce55979403291c/asset-v1:Skillfactory+FR+2020+type@asset+block/FR-A3-flex2.gif" alt="gif" class="img_center">
+                    <ul class="list_in_paragraf">
+                        <li> Свойство <strong>display: flex;</strong>
+                            <ul class="list_in_paragraf">
+                                <li>Подсвойство <strong>flex-direction:...</strong> отвечает за расположение элементов по главной оси
+                                    <ul class="list_in_paragraf">
+                                        <li> <strong>row</strong> — слева направо</li>
+                                        <li> <strong>row-reverse</strong> — справа налево</li>
+                                        <li> <strong>column</strong> — сверху вниз</li>
+                                        <li> <strong>column-reverse</strong> — снизу вверх</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Галерея 1</p>
+                    <div class="gallery gallery-1">
+                        <img src="../img/photo-1.jpg" alt=".jpg">
+                        <img src="../img/photo-2.jpg" alt=".jpg">
+                        <img src="../img/photo-3.jpg" alt=".jpg">
+                    </div>
+                    <p>Галерея 2</p>
+                    <div class="gallery gallery-2">
+                        <img src="../img/photo-4.jpg" alt=".jpg">
+                        <img src="../img/photo-5.jpg" alt=".jpg">
+                        <img src="../img/photo-6.jpg" alt=".jpg">
+                    </div>
+                    <p>Галерея 3</p>
+                    <div class="gallery gallery-3">
+                        <img src="../img/photo-7.jpg" alt=".jpg">
+                        <img src="../img/photo-8.jpg" alt=".jpg">
+                        <img src="../img/photo-9.jpg" alt=".jpg">
+                    </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                                &lt;p&gt;Галерея 1&lt;/p&gt;<br>
+                                &lt;div class="gallery gallery-1"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-1.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-2.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-3.jpg" alt=".jpg"&gt;<br>
+                                &lt;/div&gt;<br>
+                                &lt;p&gt;Галерея 2&lt;/p&gt;<br>
+                                &lt;div class="gallery gallery-2"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-4.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-5.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-6.jpg" alt=".jpg"&gt;<br>
+                                &lt;/div&gt;<br>
+                                &lt;p&gt;Галерея 3&lt;/p&gt;<br>
+                                &lt;div class="gallery gallery-3"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-7.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-8.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-9.jpg" alt=".jpg"&gt;<br>
+                                &lt;/div&gt;
+                        </code>
+                        </p>
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>
+                                .gallery{ box-shadow: 5px 5px 10px grey;<br>
+                                    &emsp;&emsp;padding: 20px;<br>
+                                    &emsp;&emsp;margin-bottom: 20px;<br>
+                                    &emsp;&emsp;<strong>display: flex;}</strong> <br>
+                                <strong>.gallery:nth-of-type(odd){flex-direction: row-reverse;}</strong> <br>
+                                <strong>.gallery:nth-of-type(even){flex-direction: row;}</strong><br>
+                                .gallery&gt;img{margin-left: 10px;<br>
+                                    &emsp;&emsp;border-style: dashed;<br>
+                                    &emsp;&emsp;border-color: #543424;<br>
+                                    &emsp;&emsp;border-width: 3px;<br>
+                                    &emsp;&emsp;width: 200px;}
+                            </code>
+                        </p>
+                </div>
+                <p>&bull; Как работает flexbox</p>
+                <iframe src="https://flexbox.help" frameborder="0" width="1400px" height="600px"></iframe>
+            </article>
+            <article>
+                <h3 id="paragraf7.2">7.2 Выравнивание по главной оси</h3>
+                <p>&bull; Свойство <b>justify-content</b> выравнивает элементы на главной оси. Его удобно использовать, когда важны не точные размеры, а общий принцип расстановки элементов (хотя эти задачи можно совмещать).</p>
+                    <ul class="list_in_paragraf">
+                        <li><strong>flex-start</strong> — начало строки флексбокса (зависит от направления оси)<br>
+                            <img src="../img/justify-content1.jpg" alt="img" width="400px">
+                        </li>
+                        <li><strong>flex-end</strong> — конец строки <br>
+                            <img src="../img/justify-content2.jpg" alt="img" width="400px">
+                        </li>
+                        <li><strong>center</strong> — центр строки <br>
+                            <img src="../img/justify-content3.jpg" alt="img" width="400px">
+                        </li>
+                        <li><strong>space-between</strong> — от края до края с равным расстоянием между <br>
+                            <img src="../img/justify-content4.jpg" alt="img" width="400px">
+                        </li>
+                    </ul>
+                <p>&bull; Если элементы оказались на разных строках, то для каждой строки выравнивание работает отдельно. Как будто каждая строка — отдельный флекс-контейнер со своей осью, то есть при значении center элементы на всех строках встанут по центру.</p>
+                <p>Галерея 1</p>
+                        <div class="gallery1 gallery-1_1">
+                            <img src="../img/photo-1.jpg" alt=".jpg">
+                            <img src="../img/photo-2.jpg" alt=".jpg">
+                            <img src="../img/photo-3.jpg" alt=".jpg">
+                        </div>
+                        <p>Галерея 2</p>
+                        <div class="gallery1 gallery-2_1">
+                            <img src="../img/photo-4.jpg" alt=".jpg">
+                            <img src="../img/photo-5.jpg" alt=".jpg">
+                            <img src="../img/photo-6.jpg" alt=".jpg">
+                        </div>
+                        <p>Галерея 3</p>
+                        <div class="gallery1 gallery-3_1">
+                            <img src="../img/photo-7.jpg" alt=".jpg">
+                            <img src="../img/photo-8.jpg" alt=".jpg">
+                            <img src="../img/photo-9.jpg" alt=".jpg">
+                        </div>
+                    <div class="example_div">
+                        <p class="example">
+                            <strong>&bull; В html</strong> <br>
+                            <code>
+                                    &lt;p&gt;Галерея 1&lt;/p&gt;<br>
+                                    &lt;div class="gallery gallery-1"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-1.jpg" alt=".jpg"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-2.jpg" alt=".jpg"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-3.jpg" alt=".jpg"&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    &lt;p&gt;Галерея 2&lt;/p&gt;<br>
+                                    &lt;div class="gallery gallery-2"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-4.jpg" alt=".jpg"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-5.jpg" alt=".jpg"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-6.jpg" alt=".jpg"&gt;<br>
+                                    &lt;/div&gt;<br>
+                                    &lt;p&gt;Галерея 3&lt;/p&gt;<br>
+                                    &lt;div class="gallery gallery-3"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-7.jpg" alt=".jpg"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-8.jpg" alt=".jpg"&gt;<br>
+                                        &emsp;&emsp;&lt;img src="../img/photo-9.jpg" alt=".jpg"&gt;<br>
+                                    &lt;/div&gt;
+                            </code>
+                            </p>
+                            <p class="example">
+                                <strong>&bull; В CSS</strong> <br>
+                                <code>
+                                    .gallery{ box-shadow: 5px 5px 10px grey;<br>
+                                        &emsp;&emsp;padding: 20px;<br>
+                                        &emsp;&emsp;margin-bottom: 20px;<br>
+                                        &emsp;&emsp;<strong>display: flex;}</strong> <br>
+                                        &emsp;&emsp;<strong>flex-direction: row;}</strong> <br>
+                                    <strong>.gallery-1{justify-content: flex-start;}</strong><br>
+                                    <strong>.gallery-2{justify-content: center;}</strong><br>
+                                    <strong>.gallery-3{justify-content: space-between;}</strong><br>
+                                    .gallery&gt;img{margin-left: 10px;<br>
+                                        &emsp;&emsp;border-style: dashed;<br>
+                                        &emsp;&emsp;border-color: #543424;<br>
+                                        &emsp;&emsp;border-width: 3px;<br>
+                                        &emsp;&emsp;width: 200px;}
+                                </code>
+                            </p>
+                    </div>
+            </article>
+            <article>
+                <h3 id="paragraf7.3">7.3 Выравнивание по дополнительной оси</h3>
+                <p>&bull; Свойство <b>align-items</b> выравнивает элементы по дополнительной оси. По умолчанию его значение может быть разным, часто это <strong>stretch.</strong></p>
+                    <ul class="list_in_paragraf">
+                        <li><strong>stretch</strong> — элементы растянутся, если у них не зафиксирована высота <br>
+                            <img src="../img/align-items1.jpg" alt="img" width="400px">
+                        </li>
+                        <li><strong>flex-start</strong><br>
+                            <img src="../img/align-items2.jpg" alt="img" width="400px">
+                        </li>
+                        <li><strong>flex-end</strong><br>
+                            <img src="../img/align-items3.jpg" alt="img" width="400px">
+                        </li>
+                        <li><strong>center</strong><br>
+                            <img src="../img/align-items4.jpg" alt="img" width="400px">
+                        </li>
+                    </ul>
+                <p>&bull; Свойство <b>align-self</b> выравнивает конкретный флекс-элемент по дополнительной оси. Его нужно задавать не всему контейнеру, а нужному флекс-элементу.</p>
+                <div class="wrapper_align-self">
+                    <div class="block_align-self">1</div>
+                    <div class="block_align-self special_align-self">2</div>
+                    <div class="block_align-self">3</div>
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;div class="wrapper_align-self"&gt;<br>
+                                &emsp;&emsp;&lt;div class="block_align-self"&gt;1&lt;/div&gt;<br>
+                                &emsp;&emsp;&lt;div class="block_align-self special_align-self"&gt;2&lt;/div&gt;<br>
+                                &emsp;&emsp;&lt;div class="block_align-self"&gt;3&lt;/div&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                        </p>
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>
+                                .wrapper_align-self{display: flex;<br>
+                                    &emsp;&emsp;flex-direction: row;<br>
+                                    &emsp;&emsp;justify-content: space-between;<br>
+                                    &emsp;&emsp;align-items: center;<br>
+                                    &emsp;&emsp;background-color: #b0b0b0;<br>
+                                    &emsp;&emsp;height: 500px;<br>
+                                    &emsp;&emsp;width: 700px;<br>
+                                    &emsp;&emsp;margin-left: 25%;}<br>
+                                .block_align-self{display: flex;<br>
+                                    &emsp;&emsp;justify-content: center;<br>
+                                    &emsp;&emsp;align-items: center;<br>
+                                    &emsp;&emsp;font-size: 36px;<br>
+                                    &emsp;&emsp;background-color: #76e7b4;<br>
+                                    &emsp;&emsp;width: 100px;<br>
+                                    &emsp;&emsp;height: 100px;}<br>
+                                .special_align-self {<strong>align-self: flex-start;</strong> <br>
+                                    &emsp;&emsp;border-style: outset;<br>
+                                    &emsp;&emsp;border-width: 2px;<br>
+                                    &emsp;&emsp;border-color: #543424;}<br>
+                            </code>
+                        </p>
+                </div>
+                <p>Галерея</p>
+                <div class="gallery2 gallery-1_2">
+                    <img src="../img/photo-1.jpg" alt=".jpg">
+                    <img src="../img/photo-2.jpg" alt=".jpg">
+                    <img src="../img/photo-3.jpg" alt=".jpg">
+                    <img src="../img/photo-4.jpg" alt=".jpg">
+                    <img src="../img/photo-5.jpg" alt=".jpg">
+                    <img src="../img/photo-6.jpg" alt=".jpg">
+                    <img src="../img/photo-7.jpg" alt=".jpg">
+                    <img src="../img/photo-8.jpg" alt=".jpg">
+                    <img src="../img/photo-9.jpg" alt=".jpg">
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                                &lt;div class="gallery2 gallery-1_2"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-1.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-2.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-3.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-4.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-5.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-6.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-7.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-8.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img src="../img/photo-9.jpg" alt=".jpg"&gt;<br>
+                                &lt;/div&gt;
+                        </code>
+                        </p>
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>
+                                .gallery2{box-shadow: 5px 5px 10px grey;<br>
+                                    &emsp;&emsp;padding: 20px;<br>
+                                    &emsp;&emsp;margin-bottom: 20px;<br>
+                                    &emsp;&emsp;height: 600px;<br>
+                                    &emsp;&emsp;<strong>display: flex;}</strong> <br>
+                                    &emsp;&emsp;<strong>align-items: center;</strong> <br>
+                                    &emsp;&emsp;background-color: lightgray;}<br>
+                                <strong>.gallery2&gt;img:nth-of-type(-n+3) {align-self: flex-start;}</strong><br>
+                                <strong>.gallery2&gt;img:nth-of-type(n+7) {align-self: flex-end;}</strong><br>
+                                .gallery&gt;img{margin-left: 10px;<br>
+                                    &emsp;&emsp;border-style: dashed;<br>
+                                    &emsp;&emsp;border-color: #543424;<br>
+                                    &emsp;&emsp;border-width: 3px;<br>
+                                    &emsp;&emsp;height: 180px;}
+                            </code>
+                        </p>
+                </div>
+            </article>
+            <article>
+                <h3 id="paragraf7.4">7.4 Порядок элементов</h3>
+                <p>&bull; Вы можете не только менять направление всех элементов, но и порядок любого из них с помощью свойства <b>order</b>. Свойство order задаёт элементам номер, по которому они будут выстраиваться. Если у элементов одинаковый номер, они встают друг за другом в изначальном порядке. По умолчанию у всех флекс-элементов order равен нулю (0). <br>
+                    <img src="../img/order.jpg" alt="img" class="img_center"><br>
+                    &bull;В этом примере мы задали элементу с цифрой «2» order: -1. Это поставит его перед всеми другими. При этом, если мы зададим элементу любой номер больше 0, он встанет в конец строки. Для того чтобы элемент занял конкретное место, придётся <strong>задать order для всех остальных.</strong>
+                </p>
+                <div class="wrapper_order">
+                    <div class="block_order special-1_order">1</div>
+                    <div class="block_order special-2_order">2</div>
+                    <div class="block_order special-3_order">3</div>
+                    <div class="block_order special-4_order">4</div>
+                    <div class="block_order special-5_order">5</div>
+                    <div class="block_order special-6_order">6</div>
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                                &lt;div class="wrapper_order"&gt;<br>
+                                    &emsp;&emsp;&lt;div class="block_order special-1_order"&gt;1&lt;/div&gt;<br>
+                                    &emsp;&emsp;&lt;div class="block_order special-2_order"&gt;2&lt;/div&gt;<br>
+                                    &emsp;&emsp;&lt;div class="block_order special-3_order"&gt;3&lt;/div&gt;<br>
+                                    &emsp;&emsp;&lt;div class="block_order special-4_order"&gt;4&lt;/div&gt;<br>
+                                    &emsp;&emsp;&lt;div class="block_order special-5_order"&gt;5&lt;/div&gt;<br>
+                                    &emsp;&emsp;&lt;div class="block_order special-6_order"&gt;6&lt;/div&gt;<br>
+                                &lt;/div&gt;
+                        </code>
+                        </p>
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>
+                                .wrapper_order{display: flex;<br>
+                                    &emsp;&emsp;flex-direction: row;<br>
+                                    &emsp;&emsp;justify-content: space-between;<br>
+                                    &emsp;&emsp;align-items: center;<br>
+                                    &emsp;&emsp;background-color: #b0b0b0;<br>
+                                    &emsp;&emsp;height: 400px;<br>
+                                    &emsp;&emsp;width: 900px;<br>
+                                    &emsp;&emsp;margin-left: 25%;}<br>
+                                .block_order{display: flex;<br>
+                                    &emsp;&emsp;justify-content: center;<br>
+                                    &emsp;&emsp;align-items: center;<br>
+                                    &emsp;&emsp;font-size: 36px;<br>
+                                    &emsp;&emsp;background-color: #76e7b4;<br>
+                                    &emsp;&emsp;width: 100px;<br>
+                                    &emsp;&emsp;height: 100px;}<br>
+                                <strong>.special-1_order {order: 1;}<br>
+                                .special-2_order {order: 2;}<br>
+                                .special-3_order {order: -1;}<br>
+                                .special-4_order {order: 5;}<br>
+                                .special-5_order {order: 4;}<br>
+                                .special-6_order {order: 6;}</strong>
+                            </code>
+                        </p>
+                </div>
+                <div class="gallery3 gallery-1_3">
+                    <img src="../img/photo-1.jpg" alt=".jpg">
+                    <img src="../img/photo-2.jpg" alt=".jpg">
+                    <img src="../img/photo-3.jpg" alt=".jpg">
+                    <img src="../img/photo-4.jpg" alt=".jpg">
+                    <img src="../img/photo-5.jpg" alt=".jpg">
+                    <img src="../img/photo-6.jpg" alt=".jpg">
+                    <img src="../img/photo-7.jpg" alt=".jpg">
+                    <img src="../img/photo-8.jpg" alt=".jpg">
+                    <img src="../img/photo-9.jpg" alt=".jpg">
+                </div>
+                <div class="gallery3 gallery-1_3">
+                    <img class="photo-1" src="../img/photo-1.jpg" alt="img">
+                    <img class="photo-2" src="../img/photo-2.jpg" alt="img">
+                    <img class="photo-3" src="../img/photo-3.jpg" alt="img">
+                    <img class="photo-4" src="../img/photo-4.jpg" alt="img">
+                    <img class="photo-5" src="../img/photo-5.jpg" alt="img">
+                    <img class="photo-6" src="../img/photo-6.jpg" alt="img">
+                    <img class="photo-7" src="../img/photo-7.jpg" alt="img">
+                    <img class="photo-8" src="../img/photo-8.jpg" alt="img">
+                    <img class="photo-9" src="../img/photo-9.jpg" alt="img">
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                                &lt;div class="gallery2 gallery-1_2"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-1" src="../img/photo-1.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-2" src="../img/photo-2.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-3" src="../img/photo-3.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-4" src="../img/photo-4.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-5" src="../img/photo-5.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-6" src="../img/photo-6.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-7" src="../img/photo-7.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-8" src="../img/photo-8.jpg" alt=".jpg"&gt;<br>
+                                    &emsp;&emsp;&lt;img class="photo-9" src="../img/photo-9.jpg" alt=".jpg"&gt;<br>
+                                &lt;/div&gt;
+                        </code>
+                        </p>
+                        <p class="example">
+                            <strong>&bull; В CSS</strong> <br>
+                            <code>
+                                .gallery3 {box-shadow: 5px 5px 10px grey;<br>
+                                    &emsp;&emsp;padding: 20px;<br>
+                                    &emsp;&emsp;margin-bottom: 20px;<br>
+                                    &emsp;&emsp;height: 400px;<br>
+                                    &emsp;&emsp;display: flex;<br>
+                                    &emsp;&emsp;align-items: center;<br>
+                                    &emsp;&emsp;justify-content: center;<br>
+                                    &emsp;&emsp;background-color: lightgray;}<br>
+                                .gallery3&gt;img {height: 180px;<br>
+                                    &emsp;&emsp;border-style: dashed;<br>
+                                    &emsp;&emsp;border-color: #543424;<br>
+                                    &emsp;&emsp;border-width: 3px;<br>
+                                    &emsp;&emsp;margin-left: 10px;}<br>
+                                .photo-1 {order: 1;}<br>
+                                .photo-2 {order: 4;}<br>
+                                <strong>.photo-3 {order: 0;}</strong><br>
+                                .photo-4 {order: 5;}<br>
+                                .photo-5 {order: 6;}<br>
+                                .photo-6 {order: 7;}<br>
+                                .photo-7 {order: 8;}<br>
+                                <strong>.photo-8 {order: 3;}</strong><br>
+                                .photo-9 {order: 9;}<br>
+                            </code>
+                        </p>
+                </div>
+                <a href="Flexbox.html" target="_blank"><b>&bull; Тренажер по Flexbox</b></a>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf8">CSS Grid</h2>
+            </center>
+            <article>
+                <h3 id="paragraf8.1">8.1 Основы grid-раскладки</h3>
+                <p>&bull; При всей своей гибкости у флексбокса есть определенные ограничения. Это одномерная раскладка, то есть элементы выстраиваются вдоль одной оси. Вы, конечно, можете выравнивать их по дополнительной. Этого достаточно, чтобы расставлять элементы интерфейса внутри отдельных секций. Но стоит учесть, что чем больше таких секций в дизайне, тем больше нужно флекс-оберток. <br>
+                    <img src="../img/Grid.jpg" alt="img" class="img_center"> <br>
+                    &bull; Такой дизайн легко создать в графическом редакторе, но не так просто в CSS для браузеров. Дизайнеры используют для верстки макетов сетки, то есть горизонтальные и вертикальные линии, которые пересекаются (отсюда и название). Эти линии помогают выравнивать элементы макета по определенным принципам и создавать стройный, упорядоченный дизайн. Часто основу сеток составляют вертикальные линии, которые образуют колонки. <br>
+                    &bull;<b> Grid</b> создавался изначально для того, чтобы решить нерешенную к тому моменту задачу — прямой перенос дизайнерских сеток в веб-верстку. Вы, конечно, и раньше могли сверстать сложный дизайн на флексбоксе. Но это требовало большого числа оберток, что плохо сказывается на читаемости HTML-кода. <br>
+                    <img src="../img/Grid2.jpg" alt="img" class="img_center"> <br>
+                    &bull; Для создания сеток также использовали разные CSS-фреймворки. Грид позволяет заменить фреймворки для создания сеток (например, bootstrap).
+                </p>
+            </article>
+            <article>
+                <h3 id="paragraf8.2">8.2 Как устроена grid-раскладка</h3>
+                <p>&bull; В начале мы, как и в случае с флексбоксом, создаем <b>контейнер </b>— родительский элемент, непосредственные потомки которого станут грид-элементами и выстроятся в сетке. У нас есть div, который станет грид-контейнером. В нем пять дивов, которые мы будем располагать в сетке. Смотрим на HTML-код:</p>
+                <div class="example_div">
+                    <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="grid-wrapper"&gt;<br>
+                            &emsp;&emsp;&lt;div class="grid-item item-1"&gt;&lt;/div&gt;<br>
+                            &emsp;&emsp;&lt;div class="grid-item item-2"&gt;&lt;/div&gt;<br>
+                            &emsp;&emsp;&lt;div class="grid-item item-3"&gt;&lt;/div&gt;<br>
+                            &emsp;&emsp;&lt;div class="grid-item item-4"&gt;&lt;/div&gt;<br>
+                            &emsp;&emsp;&lt;div class="grid-item item-5"&gt;&lt;/div&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                    </p>
+                </div>
+                <p>&bull; А в CSS зададим им фоновый цвет. Смотрим на CSS-код:</p>
+                <div class="example_div">
+                    <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .item-1 {background-color: rgb(199, 147, 147);}<br>
+                        .item-2 {background-color: rgb(100, 210, 136);}<br>
+                        .item-3 {background-color: rgb(122, 120, 234);}<br>
+                        .item-4 {background-color: rgb(209, 167, 100);}<br>
+                        .item-5 {background-color: rgb(179, 125, 197);}
+                    </code>
+                    </p>
+                </div>
+                <p>&bull; Пока что мы ничего не увидим, ведь дивы пустые, и у них не заданы размеры. Но как только мы создадим грид-сетку, мы их увидим. <br>
+                    &bull; Допустим, мы хотим создать сетку из двух колонок и трех рядов. CSS-код будет выглядеть так: <br>
+                    &emsp;&emsp;*Не обязательно записывать каждую колонку и ряд вручную. Можно использовать функцию <b>repeat()</b> для повтора одинаковых колонок/рядов*
+                </p>
+                <div class="example_div">
+                    <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .grid-wrapper{display: grid;<br>
+                            &emsp;&emsp;grid-template-columns: 200px 400px;<br>
+                            &emsp;&emsp;grid-template-rows: <strong>repeat(3 100px);</strong> <br>
+                            &emsp;&emsp;<strong>grid-gap: 2vw;</strong>}
+                    </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS (доп стилизация)</strong> <br>
+                        <code>
+                            .grid-item{border-width: 3px;<br>
+                                &emsp;&emsp;border-color: #543424;<br>
+                                &emsp;&emsp;border-style: dashed;<br>
+                        </code>
+                        </p>
+                </div>
+                <div class="grid-wrapper">
+                    <div class="grid-item item-1"></div>
+                    <div class="grid-item item-2"></div>
+                    <div class="grid-item item-3"></div>
+                    <div class="grid-item item-4"></div>
+                    <div class="grid-item item-5"></div>
+                </div>
+            </article>
+            <article>
+                <h3 id="paragraf8.3">8.3 Адаптивные гриды</h3>
+                <p>
+                    &bull; Рассмотрим резиновые колонки. Их можно сделать с помощью особой единицы измерения, которая создана специально для грид раскладки —<b> fr. </b>Это относительная единица. Она указывает размер относительно других колонок или рядов. Например,<b> grid-template-columns: 1fr 1fr;</b> скажет создать две колонки, которые займут все доступное место поровну: <br>
+                    <img src="https://lms.skillfactory.ru/assets/courseware/v1/869e16587f7425f100489452e98dc34c/asset-v1:Skillfactory+FR+2020+type@asset+block/6.11-gif-1.gif" alt="gif" class="img_center">
+                </p>
+                <p>
+                    &bull; Но если задать одной 2fr, то она займет в два раза больше места. Смотрим пример: <b>grid-template-columns: 2fr 1fr;</b> и получим: <br>
+                    <img src="https://lms.skillfactory.ru/assets/courseware/v1/f117209c96ad24ab7647ef36ad054fa9/asset-v1:Skillfactory+FR+2020+type@asset+block/6.11-gif-2.gif" alt="gif" class="img_center">
+                </p>
+                <p>
+                    &bull; Но резиновая верстка не равна адаптивной. Если мы хотим, чтобы ячейки переносились, то нужно использовать ключевое слово <b>auto-fit </b>вместо количества колонок. То есть мы скажем, чтобы их количество было таким, сколько поместится на экране, учитывая фиксированную ширину: <br>
+                </p>
+                <p>
+                    &bull; Но теперь мы столкнулись с проблемой. У нас ведь задано количество рядов. Их три, и на определенной ширине не всё содержимое туда помещается. Для решения этой задачи нам достаточно <strong>задать высоту ячейкам</strong> (в реальных проектах это делать обычно не нужно, так как высота создается самим содержимым): <br>
+                    <div class="example_div">
+                        <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            .grid-wrapper {display: grid;<br>
+                                &emsp;&emsp;grid-template-columns: repeat(auto-fit, 200px);<br>
+                                &emsp;&emsp;grid-template-rows: auto;}<br>
+                            <strong>.grid-item {min-height: 100px;}</strong> 
+                        </code>
+                        </p>
+                    </div>
+                    <img src="https://lms.skillfactory.ru/assets/courseware/v1/999b46313aa1a592e896a54e8fbce422/asset-v1:Skillfactory+FR+2020+type@asset+block/6.11-gif-4.gif" alt="gif" class="img_center">
+                </p>
+                <p>
+                    &bull; Чтобы содержимое выглядело хорошо на любой ширине экрана, а также заполняло все доступное место, используем функцию <b>minmax()</b>. Как можно догадаться из названия, она указывает минимальный и максимальный размер. Минимальным будет фиксированный в 200 пикселей, а максимальным 1fr, то есть столько, сколько есть свободного места. При этом колонки станут одинаковыми по ширине: <br>
+                    <div class="example_div">
+                        <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            .grid-wrapper {display: grid;<br>
+                                &emsp;&emsp;grid-template-columns: repeat(auto-fit, <strong>minmax(200px, 1fr));</strong><br>
+                                &emsp;&emsp;grid-template-rows: auto;}
+                        </code>
+                        </p>
+                    </div>
+                </p>
+                <a href="CSS_grid.html" target="_blank">&bull; <b>CSS grid</b></a>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf9">at rules (@-rules)</h2>
+            </center>
+            <article>
+                <p id="paragraf9.1">&bull; <b>@-правило</b> — это инструкция CSS. Каждая инструкция начинается с @ и содержит одно из ключевых слов. Они подсказывают парсеру, как CSS должен себя вести.</p><hr>
+                <p>
+                    &bull; <b>@font-face</b> <br>
+                    Данное правило позволяет загружать на веб-страницу специальные шрифты. Правило указывает браузеру скачать шрифт из указанного источника и затем отобразить его, как определено в CSS. <br>
+                    <div class="example_div">
+                        <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            <strong>@font-face</strong> {font-family: 'My Web Font'; <br>
+                                &emsp;&emsp;src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);<br>
+                            body {font-family: 'My Web Font', 'Open Sans', cursive;} <br>
+                        </code>
+                        </p>
+                    </div>
+                </p>
+                <p>
+                    &bull; <b>@import</b><br>
+                    Это правило обычно указывается в начале файла и указывает на включение внешнего CSS-файла. При этом содержимое внешнего файла вставляется на строку, где указано правило. <br>
+                    &emsp;&emsp;<a href="https://jsbin.com/terelagazu/edit?html,css,output" target="_blank">*Пример*</a>
+                </p>
+                <p>
+                    &bull; <b>@media</b><br>
+                    Это правило содержит условия для определения стилей для разных экранов. Условия могут содержать размеры экранов, что очень полезно для адаптивной верстки. С этим правилом вы обязательно столкнетесь при разработке адаптивных макетов. <br>
+                    <div class="example_div">
+                        <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            <strong>@media </strong>not|only mediatype and (media feature) {<br>
+                                &emsp;&emsp;CSS-Code;} <br>
+                        </code>
+                        </p>
+                    </div>
+                </p>
+                <div>
+                    <p><b>1. Медиатипы:</b></p>
+                    <ul class="list_in_paragraf">
+                        <li><strong>all</strong> - Устройства любого медиа-типа</li>
+                        <li><strong>print</strong> - Принтеры</li>
+                        <li><strong>screen</strong> - Экраны компьютеров, планшетов, смартфонов и т.д.</li>
+                        <li><strong>speech</strong> - Скринридеры</li>
+                    </ul>
+                    <p><b>2. Медиа функции:</b></p>
+                    <ul class="list_in_paragraf">
+                        <li><strong>max-height</strong> - Максимальная высота показываемой области, например, окна браузера</li>
+                        <li><strong>max-width</strong> - Максимальная ширина показываемой области, например, окна браузера</li>
+                        <li><strong>min-height</strong> - Минимальная высота показываемой области, например, окна браузера</li>
+                        <li><strong>min-width</strong> - Минимальная ширина показываемой области, например, окна браузера</li>
+                        <li><strong>orientation</strong> - Ориентация (портретная или ландшафтная)</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section>
+            <center>
+                <h2 id="paragraf10">Медиа-запросы</h2>
+            </center>
+            <article>
+                <h3 id="paragraf10.1">10.1 Медиа-запросы в CSS</h3>
+                <p>&bull; <b>Медиа-запросы</b> (media queries) вместо того, чтобы искать тип устройства, они смотрят на возможности устройства. </p>
+                <img src="../img/mediaquery.png" alt="png" class="img_center">
+                <p>
+                    &bull; Медиа-запросы могут использоваться для проверки информации разного характера, что позволяет точнее определить вид устройства. Эти параметры включают в себя: <br>
+                    <ul class="list_in_paragraf">
+                        <li>ширина и высота viewport;</li>
+                        <li>ширина и высота устройства;</li>
+                        <li>ориентация (расположен телефон/планшет в горизонтальном или вертикальном положении);</li>
+                        <li>разрешение.</li>
+                    </ul>
+                    <p>
+                    &bull; Использование медиа-запросов — это популярный способ создавать разные стили для компьютеров, ноутбуков, планшетов и мобильных телефонов. <br> <br>
+                    &bull; Медиа-запрос состоит из типа медиа и может содержать одно или несколько выражений, которые могут принимать значение true или false. Например: <br>
+                    </p>
+                    <div class="example_div">
+                        <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            @media screen and (max-width: 600px) {<br>
+                                &emsp;&emsp;.special {font-size: 12px;}<br>
+                              }
+                        </code>
+                        </p>
+                    </div>
+                    <p>&bull; В данном примере для типа медиа screen (то есть и для компьютеров, и для телефонов, и для планшетов) и для ширины экрана не более 600 пикселей применяется специальная величина шрифта к элементу с классом special.</p> 
+                </p>
+                <div>
+                    <p><b>Медиатипы:</b></p>
+                        <ul class="list_in_paragraf">
+                            <li><strong>all</strong> - Устройства любого медиа-типа</li>
+                            <li><strong>print</strong> - Принтеры</li>
+                            <li><strong>screen</strong> - Экраны компьютеров, планшетов, смартфонов и т.д.</li>
+                            <li><strong>speech</strong> - Скринридеры</li>
+                        </ul>
+                </div>
+                <p>&bull; Вы можете комбинировать разные параметры, например: @media (max-width: 600px) and (orientation: landscape) { ... }</p>
+                <p>
+                    <strong>&bull; Медиа-запросы можно добавлять всеми теми же способами, что и обычные стили.</strong> Например, чтобы вставить медиазапрос непосредственно в HTML, вы можете указать, что конкретный файл со стилями содержит стили только при выполнении условий медиа-запроса: <br>
+                    <div class="example_div">
+                        <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;link rel="stylesheet" <strong>media="screen and (max-width: 600px)"</strong> href="special-style.css"&gt;
+                        </code>
+                        </p>
+                    </div>
+                </p>
+                <div>
+                    <p>&bull; Для комбинирования разных условий вы можете использовать:</p>
+                    <ul class="list_in_paragraf">
+                        <li>Оператор<strong>and</strong>  как показано выше в примере: он требует, чтобы выполнялись все связанные этим оператором условия.</li>
+                        <li>Оператор<strong> not</strong>  Например, @media not screen означает для всех типов медиа, кроме screen.</li>
+                        <li>Оператор<strong> only</strong>. Этот оператор позволяет скрыть стили от старых браузеров, которые понимают только CSS2. Например, @media only screen.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                        &bull; Для управления разметкой в мобильных браузерах используется специальный meta-тег viewport. <br>
+                            <div class="example_div">
+                                <p class="example">
+                                <strong>&bull; В html</strong> <br>
+                                <code>
+                                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                                </code>
+                                </p>
+                            </div>
+                        <p>&emsp;&emsp;&emsp;где:</p> 
+                            <ul class="list_in_paragraf">
+                                <li><strong>width=device-width</strong> даёт команду браузеру подстраивать ширину страницы под ширину экрана устройства,</li>
+                                <li><strong>initial-scale=1.0</strong> — это коэффициент масштабирования.</li>
+                            </ul>
+                    </p>
+                </div>
+                <p>
+                    &bull; <b>Брейкпоинт</b> (breakpoint) — это точка, относительно которой меняется страница. <br>
+                    &emsp;&emsp;Точек может быть множество. Как 10, так и ни одной — сайт будет выглядеть одинаково на любом устройстве (но не факт, что выглядеть будет хорошо).
+                    <div class="example_div">
+                        <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            @media screen and (max-width: 600px) {<br>
+                                &emsp;&emsp;.special {font-size: 12px;}<br>
+                              }
+                        </code>
+                        </p>
+                    </div>
+                    <p>&bull; В коде выше брейкпоинтом является точка 600px — то есть, стили применятся для экранов с максимальным размером до 600px. Для экранов с размером от 601px будут применены другие стили (те, что заданы в альтернативном правиле, либо дефолтные).</p>
+                </p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

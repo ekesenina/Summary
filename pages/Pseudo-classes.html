@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <link rel="stylesheet" href="../css/Pseudo-classes.css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Селекторы псевдоклассов</h1>
+        </center>
+    </header>
+    <main>
+        <div>
+            <h2>Список покупок:</h2>
+            <nav>
+                <a href="#food">Продукты</a>
+                <a href="#household">Хозтовары</a>
+                <a href="#vet">Для детей</a> <br>
+            </nav>
+            <ul id="food"> <strong class="item">Продукты:</strong>
+                <li>Хлеб</li>
+                <li>Молоко</li>
+                <li>Яйца</li>
+                <li>Макароны</li>
+                <li>Мясо</li>
+            </ul>
+            <ul id="household"> <strong class="item">Хозтовары:</strong>
+                <li>Швабра</li>
+                <li>Губки</li>
+                <li>Кастрюля</li>
+                <li>Ведро</li>
+                <li>Тряпки</li>
+            </ul>
+            <ul id="vet"> <strong class="item">Для детей:</strong>
+                <li>Корм</li>
+                <li>Лежанка</li>
+                <li>Пищалка</li>
+                <li>Ошейник</li>
+                <li>Поводок</li>
+            </ul>
+        </div>
+        <p>
+            &bull;Пункты списков окрашены при помощи псевдокласса :nth-child (3n+1). Обратите внимание, что в разработке значения начинаются <b>с нуля</b>, то есть счётчик n исчисляется как 0, 1, 2, 3..., поэтому первые пункты тоже оказались покрашены.
+        </p>
+    </main>
+    <footer>
+        <a href="css.html">	&#9668;Назад</a>
+    </footer>
+</body>
+</html>

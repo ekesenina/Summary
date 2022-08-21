@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "TMVinograd-Regular";
+    src: url(../font/TMVinograd-Regular.otf);
+}
+
+@font-face {
+    font-family: "Engine";
+    src: url(../font/LEngineer-Regular.otf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+
+body{background-color: #c9ffb9;}
+
+header{background-color: #77966E;}
+
+h1{color: #FFC0A1;
+    font-size: 96px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+p{color: #543424;
+    font-size: 24px;
+    font-family:"NotoSans";}
+
+div{color: #543424;
+    background-color: #D4AE9B;
+    font-size: 24px;
+    width: fit-content;
+    margin-left: 100px;
+    font-family: "NotoSans";}
+
+a{color: #543424;
+    font-size: 18px;
+    font-family:"NotoSans";
+    margin: 0px 15px;}
+    a:hover{background-color: #c9ffb9;
+        font-size: 20px;
+        font-weight: bold;}
+
+#food:hover{background-color: #d1eacd;}
+
+#household:hover{background-color: #cde0ea;}
+
+#vet:hover{background-color: #e5cdea;}
+
+li:hover{font-size: 30px;
+    font-weight: bold;}
+
+.item{text-decoration: underline #543424;}
+
+li:nth-child(3n+1){background-color: #77966E;}
+
+a[href="css.html"]{background-color: #D4AE9B;
+    color: #543424;
+    font-size: 48px;
+    font-family: "Engine";
+    font-weight: lighter;}

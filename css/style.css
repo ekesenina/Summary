@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "TMVinograd-Regular";
+    src: url(../font/TMVinograd-Regular.otf);
+}
+
+@font-face {
+    font-family: "Engine";
+    src: url(../font/LEngineer-Regular.otf);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(../font/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: "ComicSans";
+    src: url(../font/comic.ttf);
+}
+
+body{background-color: #FAF4C8;}
+
+header{background-color: #7A733D;
+    padding-bottom: 40px;
+    margin-top: -65px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;}
+
+h1{color: #FBEC7D;
+    font-size: 96px;
+    font-family: "Engine";
+    font-weight: lighter;}
+
+nav{background-color: #7A733D;
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    justify-content: space-between;}
+nav>div>a{font-family: "Engine";
+    font-size: 36px;
+    text-decoration: none;
+    color: #FBEC7D;
+    padding: 0px 20px;}
+nav>div>a:hover{background: #655f32;
+    border-radius: 30px;
+    padding: 0px 20px;}
+
+main{margin-top: 100px;}
+
+.navbar{background-color: #7A733D;
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    position: relative;}
+
+p{color: #543424;
+    font-size: 24px;
+    font-family:"NotoSans";}
+
+h2{color: #FBEC7D;
+    font-size: 36px;
+    font-family:"Engine";
+    font-weight: lighter;
+    background-color: #7A7862;
+    box-shadow: 5px 5px 10px grey;
+    padding-left: 30px;}
+
+a{color: #7A7862;
+    font-size: 18px;
+    font-family:"NotoSans";}

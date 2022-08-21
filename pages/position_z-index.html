@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position_z-index</title>
+    <link rel="stylesheet" href="../css/position_z-index.css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Слои, позиционирование, z-index</h1>
+        </center>
+    </header>
+    <main>
+        <section>
+            <h2>Задание 1</h2>
+            <p>Сместите все блоки с нечётными цифрами на 50px вправо.</p>
+                <div class="wrapper">
+                    <span class="item">1</span>
+                    <span class="item">2</span>
+                    <span class="item">3</span>
+                    <span class="item">4</span>
+                    <span class="item">5</span>
+                    <span class="item">6</span>
+                    <span class="item">7</span>
+                    <span class="item">8</span>
+                    <span class="item">9</span>
+                    <span class="item">10</span>
+                </div>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="wrapper"&gt;<br>
+                        &lt;span class="item"&gt;1&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;2&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;3&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;4&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;5&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;6&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;7&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;8&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;9&lt;/span&gt;<br>
+                        &lt;span class="item"&gt;10&lt;/span&gt;<br>
+                        &lt;/div&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .wrapper {background-color: lightgray;<br>
+                            padding: 15px 5px;}<br><br>
+                        .item {margin: 5px;<br>
+                            padding: 10px;<br>
+                            background-color: rgb(139, 127, 177);<br>
+                            color: white;<br>
+                            display: block;}<br><br>
+                        <b>.item:nth-child(odd){position: relative;<br>
+                            left: 50px;}</b>
+                    </code>
+                </p>
+            </div>
+        </section>
+        <section>
+            <h2>Задание 2</h2>
+            <p>Зафиксируйте последний элемент .item в самом низу viewport так, чтобы при прокрутке он не менял своего положения. <br> <br>
+                Вы можете заметить, что как только блочный элемент получает position: fixed, он сразу же перестает занимать все отведённое ему место. Это происходит потому, что элемент покидает нормальный поток документа и в этом случае ширина (если она явно не указана), определяется его контентом. То же касается и position: absolute.
+            </p>
+                <div class="wrapper2">
+                    <span class="item2">1</span>
+                    <span class="item2">2</span>
+                    <span class="item2">3</span>
+                    <span class="item2">4</span>
+                    <span class="item2">5</span>
+                    <span class="item2">6</span>
+                    <span class="item2">7</span>
+                    <span class="item2">8</span>
+                    <span class="item2">9</span>
+                    <span class="item2">10</span>
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;div class="wrapper"&gt;<br>
+                            &lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;10&lt;/span&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            .wrapper {background-color: lightgray;<br>
+                                padding: 15px 5px;}<br><br>
+                            .item {margin: 5px;<br>
+                                padding: 10px;<br>
+                                background-color: rgb(101, 170, 129);<br>
+                                color: white;<br>
+                                display: block;}<br><br>
+                            <b>.item:nth-child(10){position: fixed;<br>
+                                bottom: 10px;<br>
+                                right: 10px;}</b>
+                        </code>
+                    </p>
+                </div>
+            <p>&bull; Результат в правом нижнем углу</p>
+        </section>
+        <section>
+            <h2>Задание 3</h2>
+            <p>Укажите первому элементу .item стили так, чтоб при прокрутке он «прилипал» к верхней части viewport. <br><br>
+                Эту задачу нельзя решить, просто указав элементу position: sticky, поскольку такое позиционирование начинает работать, только если у элемента указано хотя бы одно из свойств: top, bottom, left или right.
+            </p>
+                <div class="wrapper3">
+                    <span class="item3">1</span>
+                    <span class="item3">2</span>
+                    <span class="item3">3</span>
+                    <span class="item3">4</span>
+                    <span class="item3">5</span>
+                    <span class="item3">6</span>
+                    <span class="item3">7</span>
+                    <span class="item3">8</span>
+                    <span class="item3">9</span>
+                    <span class="item3">10</span>
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            &lt;div class="wrapper"&gt;<br>
+                            &lt;span class="item"&gt;1&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;2&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;3&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;4&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;5&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;6&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;7&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;8&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;9&lt;/span&gt;<br>
+                            &lt;span class="item"&gt;10&lt;/span&gt;<br>
+                            &lt;/div&gt;
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            .wrapper3 {background-color: lightgray;<br>
+                                padding: 15px 5px;<br>
+                                position: relative;}<br><br>
+                            .item3 {margin: 5px;<br>
+                                padding: 10px;<br>
+                                background-color: rgb(83, 110, 161);<br>
+                                color: white;<br>
+                                display: block;}<br><br>
+                            .item3:first-child {background: rgb(188, 120, 100);<br>
+                                <b>position: sticky;<br>
+                                top: 0px;<br>
+                                z-index: 1;}</b> 
+                        </code>
+                    </p>
+                </div>
+        </section>
+        <section>
+            <h2>Задание 4</h2>
+            <p>Расположите заголовок поверх розового фона. Эту задачу можно решить двумя способами, изменив стили либо фона, либо заголовка. Попробуйте оба варианта.</p>
+                <div id="pink">
+                    <div class="pink"></div>
+                    <h3>Position</h3>
+                </div>
+                <div class="example_div">
+                    <p class="example">
+                        <strong>&bull; В html</strong> <br>
+                        <code>
+                            <b>&lt;div id="pink"&gt;</b><br>
+                                &emsp;&lt;div class="pink"&gt;&lt;/div&gt;<br>
+                                &emsp;&lt;h3&gt;Position&lt;/h3&gt;<br>
+                            <b>&lt;/div&gt;</b>
+                        </code>
+                    </p>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            <b>#pink{position: relative;}</b><br><br>
+                            .pink {width: 100%;<br>
+                                height: 200px;<br>
+                                background: pink;}<br><br>
+                            h3{color: #543424;<br>
+                                font-family: "Engine";<br>
+                                font-weight: lighter;<br>
+                                font-size: 100px;<br>
+                                padding: 50px;<br>
+                                margin: 0;<br>
+                                <b> position: absolute;<br>
+                                top: 0px;}</b>
+                        </code>
+                    </p>
+                </div>
+        </section>
+        <section>
+            <h2>Задание 5</h2>
+            <p>Поместите красный круг внутрь синего квадрата, изменив стили только у синего квадрата.</p>
+            <h2>Задание 6</h2>
+            <p>Выведите заголовок «Position» поверх геометрических фигур.</p>
+                <div class="blue">
+                    <div class="red"></div>
+                </div>
+                <h4>Position</h4>
+            <div class="example_div">
+                <p class="example">
+                    <strong>&bull; В html</strong> <br>
+                    <code>
+                        &lt;div class="blue"&gt;<br>
+                            &emsp;&lt;div class="red"&gt;&lt;/div&gt;<br>
+                        &lt;/div&gt;<br>
+                        &lt;h4&gt;Position&lt;/h4&gt;
+                    </code>
+                </p>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        .blue {width: 200px;<br>
+                            height: 200px;<br>
+                            background: rgb(109, 109, 170);<br>
+                            position: absolute;}<br><br>
+                        .red {width: 100px;<br>
+                            height: 100px;<br>
+                            background: rgb(192, 111, 111);<br>
+                            border-radius: 50%;<br>
+                            position: absolute;<br>
+                            top: 50px;<br>
+                            right: 50px;}<br><br>
+                        h4 {color: #543424;<br>
+                            font-family: "Engine";<br>
+                            font-weight: lighter;<br>
+                            font-size: 100px;<br>
+                            padding: 50px;<br>
+                            margin: 0;<br>
+                            <b> position: absolute;<br>
+                            z-index: 1;}</b>
+                        </code>
+                    </p>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <a href="css.html">	&#9668;Назад</a>
+    </footer>
+</body>
+</html>

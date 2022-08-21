@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin_padding</title>
+    <link rel="stylesheet" href="../css/margin_padding.css">
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Границы. Внутренние и внешние отступы</h1>
+        </center>
+    </header>
+    <main>
+        <section>
+            <h2>Задание 1</h2>
+                <p>Задайте заголовку h2 горизонтальные margin так, чтоб он всегда был по центру страницы. Обратите внимание, что для центрирования элемента таким способом он должен быть блочным и иметь заданную ширину.</p>
+                    <h3>Базовые свойства. Расстояния, границы и отступы</h3>
+                    <h4>Занимательный подзаголовок</h4>
+                <p class="example">
+                    <strong>&bull; В CSS</strong> <br>
+                    <code>
+                        h3 {background-color: #F0BA7D; <br>
+                            width: fit-content;<br>
+                            margin: 25px auto;}<br><br>
+                        h4 {background-color: #CADADD;<br>
+                            width: fit-content;<br>
+                            margin: 0 auto;}<br>
+                    </code>
+                </p>
+        </section>
+        <section>
+            <h2>Задание 2</h2>
+                <p>Задайте заголовку h2 отступ по вертикали таким образом, чтоб расстояние между h1 и h2 было 50px. Учтите, что h1 уже имеет вертикальный отступ в 25px. <br>
+                    Несмотря на то, что первый заголовок уже имеет отступ в 25px, мы должны задать второму заголовку отступ в 50px, если нам требуется такое расстояние между элементами. Это явление называется схлопыванием внешних отступов.
+                </p>
+                    <h3 id="Task2_1">Базовые свойства. Расстояния, границы и отступы</h3>
+                    <h4 id="Task2_2">Занимательный подзаголовок</h4>
+                    <p class="example">
+                        <strong>&bull; В CSS</strong> <br>
+                        <code>
+                            h3{background-color: #F0BA7D;<br>
+                                width: fit-content;<br>
+                                margin: 25px auto;}<br><br>
+                            h4{background-color: #CADADD;<br>
+                                width: fit-content;<br>
+                                margin: 50px auto;}
+                        </code>
+                    </p>
+        </section>
+        <section>
+            <h2>Задание 3</h2>
+            <p>Задайте подзаголовку padding: 25px по горизонтали, 10px сверху и 20px снизу.</p>
+            <h3 id="Task3_1">Базовые свойства. Расстояния, границы и отступы</h3>
+            <h4 id="Task3_2">Занимательный подзаголовок</h4>
+            <p class="example">
+                <strong>&bull; В CSS</strong> <br>
+                <code>
+                    h3{background-color: #F0BA7D;<br>
+                        width: fit-content;<br>
+                        margin: 25px auto;}<br><br>
+                    h4{background-color: #CADADD;<br>
+                        width: fit-content;<br>
+                        margin: 50px auto;<br>
+                        padding: 10px 25px 20px;}
+                </code>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <a href="css.html">	&#9668;Назад</a>
+    </footer>
+</body>
+</html>
